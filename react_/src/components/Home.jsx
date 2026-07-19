@@ -8,6 +8,7 @@ function Home({ answersByTopic, submittedByTopic, highScores }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [filterStatus, setFilterStatus] = useState("all");
 
+  
   // Overall Stats Calculation
   const overallStats = useMemo(() => {
     const completedList = Object.keys(submittedByTopic).filter((k) => submittedByTopic[k]);
