@@ -465,24 +465,52 @@ export const topics = [
         question: "Component nima?",
         options: [
           "UI ning mustaqil va qayta ishlatiladigan qismi",
-          "JavaScript o'zgaruvchisi",
-          "CSS fayli",
+          "CSS Framework",
+          "JavaScript kutubxonasi",
           "Ma'lumotlar bazasi",
         ],
         correctIndex: 0,
         explanation:
-          "Component — React ilovasining mustaqil, qayta ishlatiladigan UI qismi. Har bir komponent o'zining HTML (JSX), CSS va JavaScript logikasiga ega bo'lishi mumkin.",
+          "Component — React ilovasining mustaqil va qayta ishlatiladigan UI qismi bo'lib, o'zining JSX, CSS va JavaScript logikasiga ega bo'lishi mumkin.",
       },
       {
         id: 2,
         question: "Reactda componentlar necha xil usulda yaratiladi?",
-        options: ["2 xil", "3 xil", "4 xil", "1 xil"],
+        options: ["2 xil", "3 xil", "1 xil", "4 xil"],
         correctIndex: 0,
         explanation:
-          "Reactda componentlar asosan 2 xil usulda yaratiladi: Function Component va Class Component.",
+          "Reactda componentlar asosan ikki xil usulda yaratiladi: Function Component va Class Component.",
       },
       {
         id: 3,
+        question:
+          "Class Component va Function Component o'rtasidagi farqlar qanday?",
+        options: [
+          "Farqi yo'q",
+          "Class Component class orqali, Function Component esa function orqali yaratiladi",
+          "Function Component faqat CSS yozadi",
+          "Class Component JSX ishlatmaydi",
+        ],
+        correctIndex: 1,
+        explanation:
+          "Class Component ES6 class yordamida, Function Component esa oddiy JavaScript function yordamida yaratiladi. Zamonaviy Reactda Function Component tavsiya etiladi.",
+      },
+      {
+        id: 4,
+        question:
+          "Hozirgi kunda Reactda qaysi turdagi component ko'proq ishlatiladi?",
+        options: [
+          "Class Component",
+          "HTML Component",
+          "Function Component",
+          "CSS Component",
+        ],
+        correctIndex: 2,
+        explanation:
+          "Hozirgi React loyihalarida Hooklar sababli Function Component eng ko'p ishlatiladi.",
+      },
+      {
+        id: 5,
         question: "Class Component nima?",
         options: [
           "JavaScript class orqali yaratiladigan React component",
@@ -492,145 +520,184 @@ export const topics = [
         ],
         correctIndex: 0,
         explanation:
-          "Class Component ES6 class yordamida yaratiladi va React.Component dan meros oladi. Hozirgi kunda Function Component ko'proq tavsiya etiladi.",
+          "Class Component ES6 class yordamida yaratiladi va React.Component dan meros oladi.",
       },
       {
-        id: 4,
-        question: "`extends` kalit so'zi nima vazifani bajaradi?",
+        id: 6,
+        question: "Class Component sintaksisi qanday?",
         options: [
-          "Boshqa classdan meros oladi",
-          "Componentni o'chiradi",
-          "Import qiladi",
-          "CSS ulaydi",
+          "class App extends React.Component { render() { return <h1>Hello</h1>; } }",
+          "function App() {}",
+          "const App = []",
+          "new Component()",
         ],
         correctIndex: 0,
         explanation:
-          "`extends` JavaScriptda bir classning boshqa classdan xususiyat va metodlarni meros olishini ta'minlaydi. Reactda Class Component `React.Component`dan meros oladi.",
+          "Class Component class yordamida yoziladi va render() metodidan JSX qaytaradi.",
       },
       {
-        id: 5,
+        id: 7,
+        question: "`extends` kalit so'zi nima vazifani bajaradi?",
+        options: [
+          "Componentni import qiladi",
+          "CSS ulaydi",
+          "Boshqa classdan meros oladi",
+          "State yaratadi",
+        ],
+        correctIndex: 2,
+        explanation:
+          "`extends` JavaScriptda boshqa classning xususiyat va metodlarini meros olish uchun ishlatiladi.",
+      },
+      {
+        id: 8,
         question: "Function Component nima?",
         options: [
           "JavaScript function orqali yaratiladigan React component",
-          "Oddiy CSS funksiyasi",
-          "HTML tegi",
+          "CSS funksiyasi",
+          "HTML elementi",
           "Node.js moduli",
         ],
         correctIndex: 0,
         explanation:
-          "Function Component oddiy JavaScript funksiyasi bo'lib, JSX qaytaradi. Zamonaviy React loyihalarida asosan shu usul ishlatiladi.",
-      },
-      {
-        id: 6,
-        question: "JSX nima?",
-        options: [
-          "JavaScript XML sintaksisi",
-          "CSS Framework",
-          "Java kutubxonasi",
-          "Database",
-        ],
-        correctIndex: 0,
-        explanation:
-          "JSX (JavaScript XML) JavaScript ichida HTMLga o'xshash sintaksis yozish imkonini beradi.",
-      },
-      {
-        id: 7,
-        question: "JSX expressionida nechta ota (root) element bo'lishi kerak?",
-        options: ["1 ta", "2 ta", "3 ta", "Cheklanmagan"],
-        correctIndex: 0,
-        explanation:
-          "Har bir JSX expression faqat bitta root elementni qaytarishi kerak.",
-      },
-      {
-        id: 8,
-        question: "Nima uchun JSXda bitta root element bo'lishi kerak?",
-        options: [
-          "React faqat bitta elementni return qila oladi",
-          "HTML shunday talab qiladi",
-          "CSS uchun",
-          "JavaScript cheklovi",
-        ],
-        correctIndex: 0,
-        explanation:
-          "Component faqat bitta qiymat qaytaradi. Bir nechta element kerak bo'lsa, ular bitta ota element yoki React Fragment ichiga o'raladi.",
+          "Function Component oddiy JavaScript funksiyasi bo'lib, JSX qaytaradi.",
       },
       {
         id: 9,
-        question: "Reactda `className` nima uchun ishlatiladi?",
+        question: "Function Component sintaksisi qanday?",
         options: [
-          "CSS class berish uchun",
-          "JavaScript class yaratish uchun",
-          "React Hook",
-          "Import qilish uchun",
+          "const App = []",
+          "function App() { return <h1>Hello</h1>; }",
+          "class App {}",
+          "new App()",
         ],
-        correctIndex: 0,
+        correctIndex: 1,
         explanation:
-          "`class` JavaScript kalit so'zi bo'lgani sababli Reactda uning o'rniga `className` ishlatiladi.",
+          "Function Component oddiy JavaScript function ko'rinishida yoziladi va JSX qaytaradi.",
       },
       {
         id: 10,
-        question: "React.StrictMode nima?",
+        question: "JSX nima?",
         options: [
-          "Xatolarni aniqlashga yordam beruvchi development rejimi",
-          "Production server",
           "CSS Framework",
-          "State Management kutubxonasi",
+          "JavaScript XML sintaksisi",
+          "Database",
+          "Java kutubxonasi",
         ],
-        correctIndex: 0,
+        correctIndex: 1,
         explanation:
-          "React.StrictMode faqat development rejimida ishlaydi va mumkin bo'lgan muammolarni oldindan aniqlashga yordam beradi.",
+          "JSX — JavaScript ichida HTMLga o'xshash sintaksis yozish imkonini beruvchi kengaytma.",
       },
       {
         id: 11,
+        question: "JSX expressionida nechta ota (root) element bo'lishi kerak?",
+        options: ["2 ta", "Cheklanmagan", "1 ta", "3 ta"],
+        correctIndex: 2,
+        explanation:
+          "Har bir JSX expression faqat bitta root element qaytarishi kerak.",
+      },
+      {
+        id: 12,
+        question: "Nima uchun JSXda bitta root element bo'lishi kerak?",
+        options: [
+          "React component faqat bitta elementni return qila oladi",
+          "CSS shunday talab qiladi",
+          "JavaScript xatosi uchun",
+          "HTML bunga majbur qiladi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Component faqat bitta qiymat qaytaradi. Bir nechta element kerak bo'lsa, ular bitta ota element yoki Fragment ichiga o'raladi.",
+      },
+      {
+        id: 13,
+        question: "Reactda className nima uchun ishlatiladi?",
+        options: [
+          "State yaratish uchun",
+          "CSS class berish uchun",
+          "Component import qilish uchun",
+          "Hook yaratish uchun",
+        ],
+        correctIndex: 1,
+        explanation:
+          "`className` JSX elementlariga CSS class biriktirish uchun ishlatiladi.",
+      },
+      {
+        id: 14,
+        question: "Nima uchun Reactda `class` emas, `className` ishlatiladi?",
+        options: [
+          "`class` JavaScriptning kalit so'zi bo'lgani uchun",
+          "`class` Reactda ishlamaydi",
+          "`className` tezroq ishlaydi",
+          "`class` faqat CSS uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "`class` JavaScriptda rezerv qilingan (reserved) kalit so'z bo'lgani sababli React JSXda uning o'rniga `className` ishlatiladi.",
+      },
+      {
+        id: 15,
+        question: "React.StrictMode nima?",
+        options: [
+          "Production server",
+          "CSS Framework",
+          "Development rejimida xatolarni aniqlashga yordam beruvchi vosita",
+          "State Management kutubxonasi",
+        ],
+        correctIndex: 2,
+        explanation:
+          "React.StrictMode faqat development rejimida ishlaydi va mumkin bo'lgan muammolarni aniqlashga yordam beradi.",
+      },
+      {
+        id: 16,
         question: "React componentlari qanday nomlanishi kerak?",
         options: [
-          "PascalCase (katta harf bilan)",
           "Faqat kichik harf bilan",
+          "PascalCase (katta harf bilan boshlanadi)",
           "Faqat son bilan",
           "Istalgan belgilar bilan",
         ],
-        correctIndex: 0,
+        correctIndex: 1,
         explanation:
           "React componentlari PascalCase usulida yoziladi. Masalan: Header, UserCard, ProductList.",
       },
       {
-        id: 12,
+        id: 17,
         question: "`export` nima?",
         options: [
+          "Boshqa fayldan qiymat olib keladi",
+          "State yaratadi",
           "Fayldan tashqariga qiymat chiqaradi",
-          "Boshqa fayldan olib keladi",
           "Componentni o'chiradi",
-          "CSS ulaydi",
         ],
-        correctIndex: 0,
+        correctIndex: 2,
         explanation:
-          "`export` orqali funksiya, class yoki o'zgaruvchini boshqa fayllarda foydalanish uchun chiqaramiz.",
+          "`export` yordamida funksiya, class yoki o'zgaruvchini boshqa fayllarda ishlatish uchun tashqariga chiqaramiz.",
       },
       {
-        id: 13,
+        id: 18,
         question: "`import` nima?",
         options: [
           "Boshqa fayldan export qilingan qiymatni olib keladi",
           "Component yaratadi",
-          "State yaratadi",
           "CSS yozadi",
+          "State yaratadi",
         ],
         correctIndex: 0,
         explanation:
-          "`import` boshqa fayldan export qilingan funksiya, component yoki o'zgaruvchini olib kelish uchun ishlatiladi.",
+          "`import` boshqa fayldan export qilingan qiymatni joriy faylga olib kelish uchun ishlatiladi.",
       },
       {
-        id: 14,
+        id: 19,
         question: "`export default` nima?",
         options: [
-          "Fayldan bitta asosiy qiymatni export qiladi",
           "Bir nechta qiymatni export qiladi",
           "Import o'rniga ishlatiladi",
+          "Fayldan bitta asosiy qiymatni export qiladi",
           "Componentni o'chiradi",
         ],
-        correctIndex: 0,
+        correctIndex: 2,
         explanation:
-          "`export default` yordamida fayldan bitta asosiy qiymat export qilinadi va uni import qilganda istalgan nom bilan chaqirish mumkin.",
+          "`export default` yordamida fayldan bitta asosiy qiymat export qilinadi va import vaqtida unga istalgan nom berish mumkin.",
       },
     ],
   },
