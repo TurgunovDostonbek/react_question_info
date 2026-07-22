@@ -1129,126 +1129,193 @@ export const topics = [
         options: [
           "Componentlar orasida ma'lumot uzatish usuli",
           "State saqlash usuli",
-          "CSS yozish qoidasi",
+          "CSS yozish usuli",
           "Hook turi",
         ],
         correctIndex: 0,
         explanation:
-          "Props (Properties) — React componentlariga ota componentdan bola componentga ma'lumot uzatish uchun ishlatiladi. Props faqat o'qish (read-only) xususiyatiga ega.",
+          "Props (Properties) ota (Parent) componentdan bola (Child) componentga ma'lumot uzatish uchun ishlatiladi. Props faqat o'qish (read-only) xususiyatiga ega.",
       },
       {
         id: 2,
-        question: "Children props nima?",
-        options: [
-          "Component ochilish va yopilish teglari orasidagi kontent",
-          "Faqat matn uzatish usuli",
-          "State turi",
-          "Hook",
-        ],
-        correctIndex: 0,
-        explanation:
-          "children — Reactning maxsus propsi bo'lib, componentning ochilish va yopilish teglari orasidagi barcha elementlarni o'z ichiga oladi.",
-      },
-      {
-        id: 3,
-        question: "Propsda destructuring ishlatishning afzalligi nima?",
-        options: [
-          "Kod qisqaroq va o'qilishi oson bo'ladi",
-          "Component tezroq ishlaydi",
-          "State avtomatik yaratiladi",
-          "Props o'zgaruvchan bo'ladi",
-        ],
-        correctIndex: 0,
-        explanation:
-          "Destructuring yordamida props.name o'rniga bevosita name deb foydalanish mumkin. Bu kodni toza va tushunarli qiladi.",
-      },
-      {
-        id: 4,
-        question: "Function props nima?",
-        options: [
-          "Props orqali function uzatish",
-          "Function ichida props yaratish",
-          "State o'rniga ishlatiladigan Hook",
-          "CSS funksiyasi",
-        ],
-        correctIndex: 0,
-        explanation:
-          "Function props orqali ota component bola componentga function uzatadi. Bola component esa kerak bo'lganda ushbu functionni chaqiradi.",
-      },
-      {
-        id: 5,
-        question: "Propslarni boshqa componentga qanday uzatish mumkin?",
+        question: "Props qanday yuboriladi?",
         options: [
           "JSX atributlari orqali",
-          "State orqali",
+          "useState orqali",
           "CSS orqali",
           "useEffect orqali",
         ],
         correctIndex: 0,
         explanation:
-          "Props JSX atributlari ko'rinishida uzatiladi. Masalan: <User name='Ali' age={20} />.",
+          "Props componentga HTML atributlariga o'xshash ko'rinishda uzatiladi. Masalan: <User name='Ali' age={20} />.",
+      },
+      {
+        id: 3,
+        question:
+          "Props orqali Primitive (Primitive Data Types) ma'lumotlar qanday yuboriladi?",
+        options: [
+          "{} yoki qo'shtirnoq orqali",
+          "Faqat {} orqali",
+          "Faqat [] orqali",
+          "Faqat () orqali",
+        ],
+        correctIndex: 0,
+        explanation:
+          "String qiymatlar qo'shtirnoq yoki {} orqali, qolgan primitive qiymatlar (number, boolean va boshqalar) {} ichida yuboriladi.",
+      },
+      {
+        id: 4,
+        question:
+          "Props orqali Non-Primitive (Reference Data Types) ma'lumotlar qanday yuboriladi?",
+        options: ["{} ichida", "Qo'shtirnoq ichida", "[] ichida", "() ichida"],
+        correctIndex: 0,
+        explanation:
+          "Object, Array va Function kabi reference data typelar JSX ichida {} orqali yuboriladi.",
+      },
+      {
+        id: 5,
+        question:
+          "Props yuborilgandan keyin uni bola (Child) componentda qanday qabul qilinadi?",
+        options: [
+          "Function parametrida props orqali",
+          "useState orqali",
+          "useEffect orqali",
+          "className orqali",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Props component parametrida qabul qilinadi. Masalan: function User(props) {} yoki function User({ name }) {}.",
       },
       {
         id: 6,
-        question: "Reactda rasm (img) qanday ishlatiladi?",
+        question: "Props component ichida qanday ishlatiladi?",
         options: [
-          "src atributiga import qilingan yoki URL beriladi",
-          "Faqat CSS orqali",
-          "Faqat public papkadan",
-          "Faqat base64 bilan",
+          "props.name yoki destructuring orqali",
+          "Faqat props() orqali",
+          "useState bilan",
+          "className orqali",
         ],
         correctIndex: 0,
         explanation:
-          "Reactda rasmni import qilib yoki URL orqali img tegining src atributiga berish mumkin.",
+          "Props component ichida props.property yoki destructuring ({ name }) orqali ishlatiladi.",
       },
       {
         id: 7,
-        question:
-          "Reactda ikonkalardan foydalanishning eng mashhur usuli qaysi?",
+        question: "Children props nima?",
         options: [
-          "react-icons kutubxonasi",
-          "Bootstrap JS",
-          "Node.js",
-          "Express",
+          "Component ochilish va yopilish teglari orasidagi kontent",
+          "State turi",
+          "CSS klassi",
+          "Hook",
         ],
         correctIndex: 0,
         explanation:
-          "React loyihalarida ikonkalardan foydalanish uchun eng ko'p ishlatiladigan kutubxonalardan biri react-icons hisoblanadi.",
+          "children Reactning maxsus propsi bo'lib, componentning ochilish va yopilish teglari orasidagi barcha elementlarni o'z ichiga oladi.",
       },
       {
         id: 8,
-        question:
-          "Reactda JavaScript o'zgaruvchilari JSX ichida qanday yoziladi?",
-        options: ["{} ichida", "() ichida", "[] ichida", "<> ichida"],
+        question: "Children props qanday yoziladi?",
+        options: [
+          "props.children yoki { children }",
+          "props.child",
+          "children()",
+          "useChildren()",
+        ],
         correctIndex: 0,
         explanation:
-          "JSX ichida JavaScript ifodalari va o'zgaruvchilar {} (curly braces) ichida yoziladi.",
+          "Children props props.children yoki destructuring orqali { children } ko'rinishida olinadi.",
       },
       {
         id: 9,
-        question: "Reactda dinamik qiymat nima?",
+        question: "Destructuring nima?",
         options: [
-          "O'zgarishi mumkin bo'lgan qiymat",
-          "Doimiy qiymat",
-          "Faqat string",
-          "Faqat number",
+          "Object yoki Array qiymatlarini ajratib olish usuli",
+          "React Hook",
+          "CSS texnologiyasi",
+          "Loop turi",
         ],
         correctIndex: 0,
         explanation:
-          "Dinamik qiymat foydalanuvchi harakati, state yoki propsga qarab o'zgaradigan qiymat hisoblanadi.",
+          "Destructuring JavaScript sintaksisi bo'lib, object yoki array ichidagi qiymatlarni alohida o'zgaruvchilarga ajratib olish imkonini beradi.",
       },
       {
         id: 10,
-        question: "Statik qiymat nima?",
+        question: "Propsda destructuring qanday qilinadi?",
         options: [
-          "O'zgarmaydigan doimiy qiymat",
-          "Har safar o'zgaradigan qiymat",
-          "Faqat number",
-          "API dan keladigan qiymat",
+          "function User({ name, age })",
+          "function User(props.name)",
+          "function User[name]",
+          "function User(name)",
         ],
         correctIndex: 0,
         explanation:
-          "Statik qiymat dastur ishlashi davomida o'zgarmaydigan qiymat hisoblanadi. Masalan: <h1>React Course</h1>.",
+          "Propsni destructuring qilish uchun component parametrida kerakli propertylar ajratib olinadi.",
+      },
+      {
+        id: 11,
+        question: "Propsda destructuring ishlatishning afzalligi nima?",
+        options: [
+          "Kod qisqaroq va tushunarli bo'ladi",
+          "Component tezroq ishlaydi",
+          "State hosil qiladi",
+          "Propsni o'zgartiradi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Destructuring props.name o'rniga bevosita name yozish imkonini beradi va kodni toza qiladi.",
+      },
+      {
+        id: 12,
+        question: "Function Props nima?",
+        options: [
+          "Props orqali function uzatish",
+          "Function ichida props yaratish",
+          "Hook turi",
+          "CSS funksiyasi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Function Props ota componentdan bola componentga function uzatish usulidir.",
+      },
+      {
+        id: 13,
+        question: "Function Props nima uchun ishlatiladi?",
+        options: [
+          "Bola componentdan ota componentga ma'lumot uzatish uchun",
+          "CSS yozish uchun",
+          "State yaratish uchun",
+          "API chaqirish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Function Props yordamida Child component Parent componentdagi functionni chaqirishi va ma'lumot uzatishi mumkin.",
+      },
+      {
+        id: 14,
+        question:
+          "Function Props orqali ma'lumotni bola (Child) componentdan ota (Parent) componentga qanday uzatish mumkin?",
+        options: [
+          "Parentdan yuborilgan functionni Child ichida chaqirish orqali",
+          "Faqat props orqali",
+          "CSS orqali",
+          "Import orqali",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Parent component functionni props orqali yuboradi, Child esa uni chaqirib kerakli ma'lumotni uzatadi.",
+      },
+      {
+        id: 15,
+        question: "Propslarni boshqa componentga qanday uzatish mumkin?",
+        options: [
+          "JSX atributlari orqali",
+          "useEffect orqali",
+          "Context API orqali",
+          "CSS orqali",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Bir component olgan propslarini boshqa componentga ham JSX atributlari orqali uzatishi mumkin.",
       },
     ],
   },
@@ -1267,136 +1334,234 @@ export const topics = [
         id: 1,
         question: "State nima?",
         options: [
-          "Komponentning tashqaridan oladigan ma'lumotlari",
-          "Komponent ichida saqlanadigan va vaqt o'tishi bilan o'zgarishi mumkin bo'lgan xususiy holat (ma'lumot)",
-          "CSS stillari to'plami",
-          "Saytning URL manzili",
-        ],
-        correctIndex: 1,
-        explanation:
-          "State — bu komponent ichida saqlanadigan va boshqariladigan, uning qayta render bo'lishiga sabab bo'la oladigan o'zgaruvchan ma'lumotdir.",
-      },
-      {
-        id: 2,
-        question: "useState hookidan qaytadigan qiymat qanday ko'rinishga ega?",
-        options: [
-          "Faqat bitta obyekt",
-          "Ikki elementdan iborat massiv: [current_state, set_state_function]",
-          "Faqat bitta funksiya",
-          "Uchta elementdan iborat massiv",
-        ],
-        correctIndex: 1,
-        explanation:
-          "useState massiv qaytaradi: birinchi element joriy holat qiymati (state), ikkinchi element esa shu holatni yangilovchi funksiyadir: `const [count, setCount] = useState(0)`.",
-      },
-      {
-        id: 3,
-        question:
-          "State qiymatini to'g'ridan-to'g'ri o'zgartirish (masalan, state = 5) nima uchun mumkin emas?",
-        options: [
-          "Chunki JS bunga ruxsat bermaydi",
-          "Chunki bunday o'zgarish React re-renderni chaqirmaydi va UI yangilanmay qoladi",
-          "Faqat sonlarda shunday",
-          "Buni iloji bor",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Stateni to'g'ridan-to'g'ri o'zgartirish re-renderni chaqirmaydi. Shuning uchun stateni har doim setter funksiyasi orqali o'zgartirish shart.",
-      },
-      {
-        id: 4,
-        question:
-          "Agar yangi state qiymati oldingi state qiymatiga bog'liq bo'lsa, uni qanday yangilash to'g'riroq?",
-        options: [
-          "setCount(count + 1)",
-          "setCount(prev => prev + 1) — callback funksiya orqali oldingi holatni olib yangilash",
-          "count = count + 1",
-          "setCount(1)",
-        ],
-        correctIndex: 1,
-        explanation:
-          "State asinxron ravishda yangilanishi mumkinligi sababli, agar yangi holat oldingi holatga bog'liq bo'lsa, har doim callback funksiya (`prev => prev + 1`) orqali yangilash tavsiya qilinadi.",
-      },
-      {
-        id: 5,
-        question:
-          "useState hookiga boshlang'ich qiymat sifatida funksiya berish (lazy initialization) nima uchun kerak?",
-        options: [
-          "Faqat asinxron API bilan ishlash uchun",
-          "Og'ir hisob-kitoblarni faqat birinchi renderda bajarish va keraksiz hisoblashlarning oldini olish uchun",
-          "Xatoliklarni tutish uchun",
-          "Dizaynni optimallashtirish uchun",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Boshlang'ich qiymatni hisoblash og'ir ish bo'lsa (masalan localStorage dan o'qish), unga funksiya beriladi: `useState(() => getHeavyValue())`.",
-      },
-      {
-        id: 6,
-        question:
-          "useState hookini shartlar yoki sikllar ichida ishlatish mumkinmi?",
-        options: [
-          "Ha, farqi yo'q",
-          "Yo'q, hooklar faqat komponentning eng yuqori darajasida chaqirilishi shart",
-          "Faqat sikllar ichida mumkin",
-          "Faqat useEffect ichida mumkin",
-        ],
-        correctIndex: 1,
-        explanation:
-          "React Hooklari qoidalariga ko'ra, hooklar har doim bir xil tartibda chaqirilishi kerak. Shuning uchun ularni shartlar yoki sikllar ichida chaqirish taqiqlanadi.",
-      },
-      {
-        id: 7,
-        question: "Reactda state va props o'rtasidagi asosiy farq nima?",
-        options: [
-          "State ota komponentdan keladi, props esa ichki hisoblanadi",
-          "State komponentning ichki, o'zgaruvchan holati; Props esa ota komponentdan keladigan va o'zgarmas ma'lumotdir",
-          "Hech qanday farqi yo'q",
-          "Props faqat sonlarni saqlaydi",
-        ],
-        correctIndex: 1,
-        explanation:
-          "State komponentning shaxsiy va o'zgartira oladigan ma'lumotidir. Props esa komponentga tashqaridan keladigan va uni bola komponent o'zgartira olmaydigan ma'lumotdir.",
-      },
-      {
-        id: 8,
-        question: "State o'zgarganda komponentda nima sodir bo'ladi?",
-        options: [
-          "Komponent yangi state qiymati bilan qayta render bo'ladi",
-          "Brauzer butunlay yangilanadi",
-          "Fayllar o'chib ketadi",
-          "Hech narsa",
+          "Komponent ichida saqlanadigan va o'zgarishi mumkin bo'lgan ma'lumot",
+          "Komponentga tashqaridan keladigan ma'lumot",
+          "CSS klasslari",
+          "HTML atributi",
         ],
         correctIndex: 0,
         explanation:
-          "State o'zgarishi re-render chaqiradi, natijada React Virtual DOMni yangilab, faqat o'zgargan qismlarni ekranda aks ettiradi.",
+          "State — komponent ichida saqlanadigan va vaqt o'tishi bilan o'zgarishi mumkin bo'lgan ma'lumotdir. State o'zgarsa komponent qayta render bo'ladi.",
+      },
+      {
+        id: 2,
+        question: "Reactda Hook nima?",
+        options: [
+          "Function Component ichida React imkoniyatlaridan foydalanishga imkon beruvchi maxsus funksiya",
+          "CSS kutubxonasi",
+          "React Router komponenti",
+          "JavaScript klassi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Hook — Reactning maxsus funksiyasi bo'lib, Function Component ichida state, lifecycle va boshqa React imkoniyatlaridan foydalanishga yordam beradi.",
+      },
+      {
+        id: 3,
+        question: "Reactda Hooklar nima uchun ishlatiladi?",
+        options: [
+          "State va boshqa React imkoniyatlaridan Function Componentda foydalanish uchun",
+          "Faqat CSS yozish uchun",
+          "HTML yaratish uchun",
+          "Server bilan ishlash uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Hooklar Function Componentlarda state, lifecycle, context va boshqa React funksiyalaridan foydalanish imkonini beradi.",
+      },
+      {
+        id: 4,
+        question: "useState hooki nima?",
+        options: [
+          "State yaratish va boshqarish uchun Hook",
+          "API chaqirish Hooki",
+          "Router Hooki",
+          "Context Hooki",
+        ],
+        correctIndex: 0,
+        explanation:
+          "useState — Function Component ichida state yaratish va uni boshqarish uchun ishlatiladigan React Hookidir.",
+      },
+      {
+        id: 5,
+        question: "useState hooki qayerdan import qilinadi?",
+        options: ["react", "react-dom", "next", "redux"],
+        correctIndex: 0,
+        explanation:
+          "useState React kutubxonasidan import qilinadi: import { useState } from 'react'.",
+      },
+      {
+        id: 6,
+        question: "useState hookidan qanday foydalaniladi?",
+        options: [
+          "const [state, setState] = useState(initialValue)",
+          "const state = useState()",
+          "new useState()",
+          "useState(state)",
+        ],
+        correctIndex: 0,
+        explanation:
+          "useState destructuring orqali ishlatiladi va state hamda setter funksiyani qaytaradi.",
+      },
+      {
+        id: 7,
+        question: "useState() ichiga qanday qiymatlar berish mumkin?",
+        options: [
+          "Har qanday JavaScript qiymati (string, number, boolean, array, object, function va boshqalar)",
+          "Faqat number",
+          "Faqat string",
+          "Faqat object",
+        ],
+        correctIndex: 0,
+        explanation:
+          "useState boshlang'ich qiymat sifatida istalgan JavaScript qiymatini qabul qiladi.",
+      },
+      {
+        id: 8,
+        question: "useState() hookining afzalligi nimada?",
+        options: [
+          "State o'zgarganda komponent avtomatik qayta render bo'ladi",
+          "HTML yaratadi",
+          "CSS yozadi",
+          "API yaratadi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "useState state boshqarishni osonlashtiradi va state o'zgarganda UI avtomatik yangilanadi.",
       },
       {
         id: 9,
-        question:
-          "Object ko'rinishidagi stateni qisman qanday yangilaymiz (faqat bitta xossasini)?",
+        question: "Nima uchun useState hookidan foydalanamiz?",
         options: [
-          "setForm({ name: 'Ali' }) — to'g'ridan-to'g'ri",
-          "setForm(prev => ({ ...prev, name: 'Ali' })) — spread operator yordamida eski qiymatlarni saqlab qolib",
-          "form.name = 'Ali'",
-          "setForm('Ali')",
+          "Komponentning o'zgaruvchan ma'lumotlarini saqlash va boshqarish uchun",
+          "Komponent import qilish uchun",
+          "CSS yozish uchun",
+          "API yaratish uchun",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "Obyekt statelarini yangilashda eski xossalarni o'chib ketmasligi uchun spread operator `...` yordamida ularni nusxalab olish kerak.",
+          "useState komponent ichidagi o'zgaruvchan ma'lumotlarni saqlash va yangilash uchun ishlatiladi.",
       },
       {
         id: 10,
-        question: "React 18 da Batching (guruhlash) nima?",
+        question: "useState() qanday qiymat qaytaradi?",
         options: [
-          "Stateni o'chirish",
-          "Bir nechta state o'zgarishlarini bitta renderga birlashtirish orqali unumdorlikni oshirish",
-          "Massivlarni saralash",
-          "Faqat API da ishlaydigan asbob",
+          "Ikki elementdan iborat massiv: [state, setState]",
+          "Object",
+          "Function",
+          "String",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "Batching — React bir vaqtning o'zida yuz bergan bir nechta state yangilanishlarini bitta render doirasida guruhlab bajarish xususiyatidir.",
+          "useState joriy state va uni yangilovchi setter funksiyadan iborat massiv qaytaradi.",
+      },
+      {
+        id: 11,
+        question: "Nima uchun useState() ni destructuring qilamiz?",
+        options: [
+          "State va setter funksiyani alohida olish uchun",
+          "Kodni qisqartirish uchun xolos",
+          "Object yaratish uchun",
+          "Massivni o'chirish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "useState massiv qaytargani uchun destructuring orqali state va setter funksiyani ajratib olamiz.",
+      },
+      {
+        id: 12,
+        question: "useState() ni destructuring qilish qanday yoziladi?",
+        options: [
+          "const [count, setCount] = useState(0)",
+          "const { count, setCount } = useState(0)",
+          "const count = useState(0)",
+          "let count = useState(0)",
+        ],
+        correctIndex: 0,
+        explanation:
+          "useState massiv qaytaradi, shuning uchun [] yordamida destructuring qilinadi.",
+      },
+      {
+        id: 13,
+        question:
+          "State qiymatini to'g'ridan-to'g'ri o'zgartirish (masalan, state = 5) nima uchun mumkin emas?",
+        options: [
+          "React re-render qilmaydi va UI yangilanmaydi",
+          "JavaScript ruxsat bermaydi",
+          "Faqat numberlarda mumkin emas",
+          "Mumkin",
+        ],
+        correctIndex: 0,
+        explanation:
+          "State setter function orqali yangilanishi kerak. To'g'ridan-to'g'ri o'zgartirish Reactga ma'lum bo'lmaydi.",
+      },
+      {
+        id: 14,
+        question:
+          "Agar yangi state qiymati oldingi state qiymatiga bog'liq bo'lsa, uni qanday yangilash to'g'riroq?",
+        options: [
+          "setState(prev => prev + 1)",
+          "state++",
+          "state = state + 1",
+          "setState(1)",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Oldingi qiymatga bog'liq bo'lsa callback function ishlatiladi: setState(prev => prev + 1).",
+      },
+      {
+        id: 15,
+        question:
+          "useState hookiga boshlang'ich qiymat sifatida funksiya berish (Lazy Initialization) nima uchun kerak?",
+        options: [
+          "Og'ir hisob-kitobni faqat birinchi renderda bajarish uchun",
+          "API chaqirish uchun",
+          "State o'chirish uchun",
+          "CSS optimizatsiyasi uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Lazy Initialization og'ir hisoblashlarni faqat komponent birinchi render bo'lganda bajaradi.",
+      },
+      {
+        id: 16,
+        question:
+          "useState hookini shartlar yoki sikllar ichida ishlatish mumkinmi?",
+        options: [
+          "Yo'q, hooklar faqat komponentning eng yuqori qismida chaqiriladi",
+          "Ha",
+          "Faqat if ichida",
+          "Faqat for ichida",
+        ],
+        correctIndex: 0,
+        explanation:
+          "React Hook qoidalariga ko'ra hooklar doimo bir xil tartibda chaqirilishi kerak.",
+      },
+      {
+        id: 17,
+        question: "Reactda State va Props o'rtasidagi asosiy farq nima?",
+        options: [
+          "State ichki va o'zgaruvchan, Props tashqaridan keladi va read-only",
+          "Ikkalasi bir xil",
+          "Props ichki ma'lumot",
+          "State ota komponentdan keladi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "State komponentning ichki holati, Props esa ota komponentdan uzatiladigan ma'lumotdir.",
+      },
+      {
+        id: 18,
+        question: "State o'zgarganda komponentda nima sodir bo'ladi?",
+        options: [
+          "Komponent qayta render bo'ladi",
+          "Brauzer qayta yuklanadi",
+          "Hech narsa bo'lmaydi",
+          "Server qayta ishga tushadi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "State yangilanganda React komponentni yangi state bilan qayta render qiladi.",
       },
     ],
   },
@@ -1413,129 +1578,621 @@ export const topics = [
     questions: [
       {
         id: 1,
-        question:
-          "Reactda hodisalarni (events) boshqarish HTML dagi hodisalardan qanday farq qiladi?",
+        question: "Reactda formalar qanday bo'ladi?",
         options: [
-          "Reactda hodisalar camelCase ko'rinishida yoziladi va qiymat sifatida string emas, funksiya beriladi",
-          "Reactda hodisalar ishlamaydi",
-          "HTML dagi bilan bir xil",
-          "Faqat CSS orqali boshqariladi",
+          "Controlled va Uncontrolled",
+          "Faqat Controlled",
+          "Faqat Uncontrolled",
+          "Static va Dynamic",
         ],
         correctIndex: 0,
         explanation:
-          'HTML da hodisalar kichik harflarda yoziladi (`onclick="foo()"`), Reactda esa camelCase shaklida yoziladi, qiymatiga funksiya uzatiladi: `onClick={foo}`.',
+          "Reactda formalar asosan ikki xil bo'ladi: Controlled va Uncontrolled. Controlled formalar state orqali, Uncontrolled formalar esa DOM orqali boshqariladi.",
       },
       {
         id: 2,
-        question:
-          "Reactda hodisani tinglovchi funksiyaga argument yuborish qanday amalga oshiriladi?",
+        question: "React formalar bilan ishlashning umumiy tushunchasi qanday?",
         options: [
-          "onClick={handleClick(id)} — to'g'ridan-to'g'ri chaqirish",
-          "onClick={() => handleClick(id)} — arrow funksiya orqali o'rab chaqirish",
-          "onClick={handleClick.id}",
-          "onClick=[handleClick(id)]",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Agar funksiyaga parametr uzatmoqchi bo'lsak, uni arrow funksiya orqali o'rashimiz kerak. Aks holda funksiya render paytida darhol bajarilib ketadi.",
-      },
-      {
-        id: 3,
-        question: "SyntheticEvent nima?",
-        options: [
-          "React tomonidan brauzerlarning o'z hodisalari ustiga qurilgan va barcha brauzerlarda bir xil ishlashini ta'minlovchi o'rovchi obyekt",
-          "Sun'iy hosil qilingan xatoliklar",
-          "Faqat telefonlarda ishlaydigan hodisa",
-          "HTML dagi hodisaning nomi",
+          "Ma'lumotlarni state orqali boshqarish",
+          "Faqat CSS yozish",
+          "Server yaratish",
+          "Component import qilish",
         ],
         correctIndex: 0,
         explanation:
-          "React turli brauzerlarda hodisalar bir xil ishlashi uchun brauzerning shaxsiy hodisasini (nativeEvent) o'zining `SyntheticEvent` ob'ektiga o'raydi.",
+          "React formalarida foydalanuvchi kiritgan ma'lumotlar odatda state yordamida boshqariladi.",
+      },
+      {
+        id: 3,
+        question: "Reactda forma ma'lumotlarini qanday yaratamiz?",
+        options: [
+          "Input, textarea, select va button elementlari orqali",
+          "Faqat div orqali",
+          "Faqat table orqali",
+          "Faqat API orqali",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Forma input, textarea, select va button elementlari yordamida yaratiladi.",
       },
       {
         id: 4,
         question:
-          "Forma yuborilganda sahifa yangilanishining oldini olish uchun nima qilinadi?",
+          "Forma komponentini alohida Component sifatida qanday ishlatamiz?",
         options: [
-          "event.stopPropagation()",
-          "event.preventDefault()",
-          "return false",
-          "preventDefault(event)",
+          "Alohida component yaratib import qilamiz",
+          "Faqat App.jsx ichida yozamiz",
+          "Faqat index.js da yoziladi",
+          "Buni iloji yo'q",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "Forma yuborilganda brauzer sahifani avtomatik yangilashga harakat qiladi. Buning oldini olish uchun hodisa ob'ektidagi `event.preventDefault()` metodi chaqiriladi.",
+          "Forma alohida komponentga ajratilib boshqa joylarda import qilib ishlatilishi mumkin.",
       },
       {
         id: 5,
-        question:
-          "Hodisa tarqalishini (event bubbling) to'xtatish uchun qaysi metod ishlatiladi?",
+        question: "Formadagi ma'lumotlarni console.log() ga qanday chiqaramiz?",
         options: [
-          "event.preventDefault()",
-          "event.stopPropagation()",
-          "event.stop()",
-          "event.cancelBubble()",
+          "onSubmit yoki onChange ichida console.log() orqali",
+          "Faqat useEffect orqali",
+          "Faqat CSS bilan",
+          "Chiqarib bo'lmaydi",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "Hodisa ota elementlarga tarqalib ketmasligini (bubbling) oldini olish uchun `event.stopPropagation()` metodidan foydalaniladi.",
+          "Input qiymatlari event yoki state orqali olinib console.log() yordamida chiqariladi.",
       },
       {
         id: 6,
-        question: "Reactda input qiymati o'zgarganda qaysi hodisa ishlatiladi?",
-        options: ["onInput", "onChange", "onKeypress", "onValueChange"],
-        correctIndex: 1,
+        question: "Reactda onChange hodisasi (event) nima?",
+        options: [
+          "Input qiymati o'zgarganda ishlaydigan hodisa",
+          "Sahifa yuklanganda ishlaydi",
+          "Mouse bosilganda ishlaydi",
+          "Component o'chganda ishlaydi",
+        ],
+        correctIndex: 0,
         explanation:
-          "Reactda kiritish maydonidagi har bir o'zgarishni kuzatish uchun an'anaviy `onChange` hodisasidan foydalaniladi.",
+          "onChange input qiymati o'zgargan zahoti ishlaydigan React hodisasidir.",
       },
       {
         id: 7,
-        question: "Input elementining qiymatini hodisa ichida qanday olamiz?",
+        question: "onChange hodisasi qanday ishlaydi?",
         options: [
-          "event.value",
-          "event.target.value",
-          "event.input.value",
-          "target.value",
+          "Qiymat o'zgarganda callback functionni ishga tushiradi",
+          "Faqat submit bo'lganda ishlaydi",
+          "Faqat buttonda ishlaydi",
+          "Faqat selectda ishlaydi",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "`event.target` — bu hodisa sodir bo'lgan DOM elementidir. Undan kiritilgan qiymatni olish uchun `event.target.value` yoziladi.",
+          "onChange foydalanuvchi qiymatni o'zgartirganda callback funksiyani chaqiradi.",
       },
       {
         id: 8,
-        question:
-          "Quyidagi kodda nima sodir bo'ladi: `<button onClick={handleClick()}>Bosish</button>`?",
+        question: "onChange eventidagi ma'lumotlarni qanday olamiz?",
         options: [
-          "Tugma bosilganda handleClick ishlaydi",
-          "handleClick funksiyasi komponent render bo'lgan zahoti avtomatik bajariladi va xato kelib chiqishi mumkin",
-          "Tugma bosilmaydi",
-          "Sintaktik xato beradi",
+          "event.target.value",
+          "event.value",
+          "target.text",
+          "value.target",
         ],
-        correctIndex: 1,
-        explanation:
-          "Funksiya qavslar bilan chaqirilgani sababli (`handleClick()`), u render vaqtida darhol bajariladi. Uni faqat havola sifatida berish kerak: `onClick={handleClick}`.",
+        correctIndex: 0,
+        explanation: "Input qiymati event.target.value orqali olinadi.",
       },
       {
         id: 9,
-        question: "Tugma ikki marta bosilganda ishlaydigan hodisa nomi nima?",
-        options: ["onDoubleSubmit", "onDoubleClick", "on2Click", "onDbClick"],
-        correctIndex: 1,
+        question: "event.target.value (e.target.value) nima?",
+        options: [
+          "Inputning joriy qiymati",
+          "Input id si",
+          "Input classi",
+          "Input turi",
+        ],
+        correctIndex: 0,
         explanation:
-          "Reactda element ikki marta tezkor bosilganda ishlaydigan hodisa nomi `onDoubleClick` deb ataladi.",
+          "event.target.value foydalanuvchi kiritgan qiymatni qaytaradi.",
       },
       {
         id: 10,
         question:
-          "Reactda klaviatura tugmasi bosilganda qaysi hodisa tinglanadi?",
+          "Formadagi ma'lumotlarni useState() yordamida qanday saqlaymiz?",
         options: [
-          "onKeyDown / onKeyUp",
-          "onPress",
-          "onKeyboard",
-          "onButtonPress",
+          "onChange ichida setState orqali",
+          "CSS orqali",
+          "HTML orqali",
+          "Import orqali",
         ],
         correctIndex: 0,
         explanation:
-          "Klaviaturadan tugma bosilganda yoki qo'yib yuborilganda `onKeyDown`, `onKeyPress` yoki `onKeyUp` kabi standart hodisalar ishlatiladi.",
+          "Input qiymati onChange ichida setter funksiyasi orqali statega yoziladi.",
+      },
+      {
+        id: 11,
+        question:
+          "Formadagi ma'lumotlarni state orqali boshqarish qanday amalga oshiriladi?",
+        options: [
+          "value va onChange yordamida",
+          "Faqat value bilan",
+          "Faqat onClick bilan",
+          "Faqat id bilan",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Controlled Componentlarda value va onChange birgalikda ishlatiladi.",
+      },
+      {
+        id: 12,
+        question:
+          'Quyidagi ko\'rinish nimani anglatadi? const [data, setData] = useState("");',
+        options: [
+          "State va setter funksiyasini yaratadi",
+          "Array yaratadi",
+          "Object yaratadi",
+          "Function chaqiradi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Bu useState yordamida data nomli state va setData setter funksiyasini yaratadi.",
+      },
+      {
+        id: 13,
+        question: "Forma bilan ishlashda funksiyalar qanday yoziladi?",
+        options: [
+          "Arrow yoki oddiy function ko'rinishida",
+          "Faqat classda",
+          "Faqat async",
+          "Faqat constructor ichida",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Formalar bilan ishlash uchun odatiy JavaScript funksiyalari yoziladi.",
+      },
+      {
+        id: 14,
+        question: "Formadagi ma'lumotlarni qanday yangilaymiz?",
+        options: [
+          "setState orqali",
+          "To'g'ridan-to'g'ri state = qiymat",
+          "document.write orqali",
+          "reload orqali",
+        ],
+        correctIndex: 0,
+        explanation: "State setter funksiyasi orqali yangilanadi.",
+      },
+      {
+        id: 15,
+        question: "Formadagi ma'lumotlarni reset (tozalash) qanday qilinadi?",
+        options: [
+          "State qiymatini boshlang'ich qiymatga qaytarish orqali",
+          "Reload qilish orqali",
+          "Inputni o'chirish orqali",
+          "CSS bilan",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Controlled formalarda state boshlang'ich qiymatga qaytariladi.",
+      },
+      {
+        id: 16,
+        question: "Reactda buttonning default type qiymati qanday?",
+        options: ["submit", "button", "reset", "none"],
+        correctIndex: 0,
+        explanation:
+          "HTML va Reactda formadagi buttonning default type qiymati submit hisoblanadi.",
+      },
+      {
+        id: 17,
+        question: 'type="button" va type="submit" o\'rtasidagi farq nima?',
+        options: [
+          "submit formani yuboradi, button esa oddiy tugma",
+          "Farqi yo'q",
+          "button formani yuboradi",
+          "submit hech narsa qilmaydi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "submit forma yuboradi, button esa faqat onClick kabi hodisalar uchun ishlatiladi.",
+      },
+      {
+        id: 18,
+        question: "Formada onClick hodisasi qanday vazifani bajaradi?",
+        options: [
+          "Element bosilganda funksiyani ishga tushiradi",
+          "Inputni o'chiradi",
+          "Formani reset qiladi",
+          "State yaratadi",
+        ],
+        correctIndex: 0,
+        explanation: "onClick element bosilganda callback funksiyani bajaradi.",
+      },
+      {
+        id: 19,
+        question: "Inputdagi value atributi nima vazifani bajaradi?",
+        options: [
+          "Input qiymatini boshqaradi",
+          "Input rangini o'zgartiradi",
+          "Inputni yashiradi",
+          "Inputni disable qiladi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Controlled Componentlarda value input qiymatini boshqaradi.",
+      },
+      {
+        id: 20,
+        question: "Reactda inputga value qanday beriladi?",
+        options: [
+          "value={state}",
+          'value="text"',
+          "value={{text}}",
+          "value(text)",
+        ],
+        correctIndex: 0,
+        explanation: "Controlled Componentlarda value state bilan bog'lanadi.",
+      },
+      {
+        id: 21,
+        question: "Form tegiga onSubmit qanday beriladi?",
+        options: [
+          "<form onSubmit={handleSubmit}>",
+          "<form submit={handleSubmit}>",
+          "<form onClick={handleSubmit}>",
+          "<form action={handleSubmit}>",
+        ],
+        correctIndex: 0,
+        explanation: "Forma yuborilishini ushlash uchun onSubmit ishlatiladi.",
+      },
+      {
+        id: 22,
+        question: "onSubmit hodisasi qanday ishlaydi?",
+        options: [
+          "Forma yuborilganda callback funksiyani chaqiradi",
+          "Input yozilganda ishlaydi",
+          "Mouse bosilganda ishlaydi",
+          "Component yuklanganda ishlaydi",
+        ],
+        correctIndex: 0,
+        explanation: "onSubmit forma yuborilganda ishlaydi.",
+      },
+      {
+        id: 23,
+        question: "e.preventDefault() nima?",
+        options: [
+          "Brauzerning standart harakatini bekor qiladi",
+          "State yaratadi",
+          "DOM yaratadi",
+          "Reload qiladi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "preventDefault brauzerning default harakatini to'xtatadi.",
+      },
+      {
+        id: 24,
+        question: "e.preventDefault() nima uchun ishlatiladi?",
+        options: [
+          "Forma yuborilganda sahifa yangilanishini oldini olish uchun",
+          "Inputni tozalash uchun",
+          "Buttonni o'chirish uchun",
+          "CSS yozish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Ko'pincha formani submit qilganda reload bo'lmasligi uchun ishlatiladi.",
+      },
+      {
+        id: 25,
+        question:
+          "Formadagi ma'lumotlarni object ko'rinishida qanday yig'amiz?",
+        options: [
+          "State ichida object saqlab",
+          "Array ichida",
+          "String ichida",
+          "Number ichida",
+        ],
+        correctIndex: 0,
+        explanation: "Bir nechta input qiymatlari object ichida saqlanadi.",
+      },
+      {
+        id: 26,
+        question: "Reactda forma va objectlar bilan qanday ishlanadi?",
+        options: [
+          "Spread operator va state yordamida",
+          "Faqat CSS bilan",
+          "document.write bilan",
+          "Reload bilan",
+        ],
+        correctIndex: 0,
+        explanation: "Object state spread operator yordamida yangilanadi.",
+      },
+      {
+        id: 27,
+        question: "uuid nima?",
+        options: [
+          "Unique ID yaratadigan kutubxona",
+          "CSS framework",
+          "Router",
+          "Database",
+        ],
+        correctIndex: 0,
+        explanation: "uuid har safar takrorlanmas ID yaratadi.",
+      },
+      {
+        id: 28,
+        question: "uuid kutubxonasi nima uchun ishlatiladi?",
+        options: [
+          "Unique ID yaratish uchun",
+          "API yaratish uchun",
+          "Style yozish uchun",
+          "Component yaratish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "React listlarida yoki ma'lumotlarda unique id yaratishda ishlatiladi.",
+      },
+      {
+        id: 29,
+        question: "uuid qanday o'rnatiladi?",
+        options: ["npm i uuid", "npm i react-uuid", "npm uuid", "yarn react"],
+        correctIndex: 0,
+        explanation: "uuid kutubxonasi npm i uuid orqali o'rnatiladi.",
+      },
+      {
+        id: 30,
+        question: "uuid kutubxonasini qanday import qilamiz?",
+        options: [
+          "import { v4 as uuidv4 } from 'uuid'",
+          "import uuid from 'uuid'",
+          "require('uuidv4')",
+          "import uuid from 'react'",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Ko'p ishlatiladigan import usuli: import { v4 as uuidv4 } from 'uuid'.",
+      },
+      {
+        id: 31,
+        question: "uuid() funksiyasidan qanday foydalaniladi?",
+        options: ["uuidv4()", "uuid()", "new uuid()", "UUID.create()"],
+        correctIndex: 0,
+        explanation: "Import qilingan uuidv4() funksiyasi unique id yaratadi.",
+      },
+      {
+        id: 32,
+        question: "Formadagi id ning ahamiyati nima?",
+        options: [
+          "Har bir ma'lumotni noyob aniqlash uchun",
+          "CSS yozish uchun",
+          "API chaqirish uchun",
+          "Component import qilish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "id har bir element yoki ma'lumotni boshqalaridan ajratish uchun ishlatiladi.",
+      },
+      {
+        id: 33,
+        question: "id nima uchun ishlatiladi?",
+        options: [
+          "Element yoki ma'lumotni noyob aniqlash uchun",
+          "Inputni yashirish uchun",
+          "Style berish uchun",
+          "Formani yuborish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "id element yoki ma'lumotni unique tarzda aniqlash imkonini beradi.",
+      },
+      {
+        id: 34,
+        question: "Nima uchun id takrorlanmas (unique) bo'lishi kerak?",
+        options: [
+          "Har bir elementni alohida aniqlash uchun",
+          "Kod qisqaroq bo'lishi uchun",
+          "CSS tezroq ishlashi uchun",
+          "React talab qilmagani uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Takrorlanmas id React va JavaScriptga kerakli elementni aniq topishga yordam beradi.",
+      },
+      {
+        id: 35,
+        question:
+          "Reactda yangi elementni (Add Event) ro'yxatga qanday qo'shamiz?",
+        options: [
+          "setState yordamida yangi elementni massivga qo'shib",
+          "document.write() orqali",
+          "HTML yozib",
+          "Reload qilib",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Yangi element state ichidagi massivga qo'shiladi va komponent qayta render bo'ladi.",
+      },
+      {
+        id: 36,
+        question: "Add Event funksiyasi qanday ishlaydi?",
+        options: [
+          "Yangi ma'lumotni statega qo'shib ro'yxatni yangilaydi",
+          "Sahifani qayta yuklaydi",
+          "Inputni o'chiradi",
+          "CSS ni yangilaydi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Add Event funksiyasi eski massivga yangi element qo'shib state ni yangilaydi.",
+      },
+      {
+        id: 37,
+        question: "Add Eventda Spread Operator (...) nima uchun ishlatiladi?",
+        options: [
+          "Eski massivni saqlab qolib yangi element qo'shish uchun",
+          "Massivni o'chirish uchun",
+          "Object yaratish uchun",
+          "Import qilish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Spread operator eski massivni nusxalab, unga yangi element qo'shishga yordam beradi.",
+      },
+      {
+        id: 38,
+        question:
+          "Formadagi objectni Spread Operator yordamida qanday yangilaymiz?",
+        options: [
+          "setData({ ...data, name: value })",
+          "data.name = value",
+          "setData(value)",
+          "data.push(value)",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Object state yangilanayotganda eski qiymatlar saqlanib qolishi uchun spread operator ishlatiladi.",
+      },
+      {
+        id: 39,
+        question: "Reactda label va input qanday bog'lanadi?",
+        options: [
+          "htmlFor va id atributlari orqali",
+          "className orqali",
+          "name orqali",
+          "value orqali",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Reactda label elementi htmlFor atributi orqali inputning id si bilan bog'lanadi.",
+      },
+      {
+        id: 40,
+        question: "Label ichida select yozishning afzalligi nimada?",
+        options: [
+          "Selectni bosish va foydalanish qulayroq bo'ladi",
+          "Majburiy talab",
+          "Tezroq ishlaydi",
+          "Style yaxshilanadi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Label ichiga joylashtirilgan select foydalanuvchi uchun qulayroq bo'ladi.",
+      },
+      {
+        id: 41,
+        question: "Reactda select elementi qanday ishlatiladi?",
+        options: [
+          "value va onChange bilan",
+          "Faqat onClick bilan",
+          "Faqat CSS bilan",
+          "Faqat id bilan",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Select ham Controlled Component sifatida value va onChange bilan ishlatiladi.",
+      },
+      {
+        id: 42,
+        question: "Select elementining qiymatini qanday olamiz?",
+        options: [
+          "event.target.value",
+          "event.value",
+          "select.value()",
+          "target.text",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Selectning tanlangan qiymati event.target.value orqali olinadi.",
+      },
+      {
+        id: 43,
+        question: "Select qiymatini statega qanday saqlaymiz?",
+        options: [
+          "onChange ichida setState(event.target.value)",
+          "onClick bilan",
+          "CSS orqali",
+          "Reload orqali",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Select qiymati onChange hodisasi orqali statega yoziladi.",
+      },
+      {
+        id: 44,
+        question:
+          "Selectdagi tanlangan qiymatni object ichiga qanday joylaymiz?",
+        options: [
+          "setData({ ...data, category: e.target.value })",
+          "data.category = value",
+          "push() orqali",
+          "filter() orqali",
+        ],
+        correctIndex: 0,
+        explanation: "Object state spread operator yordamida yangilanadi.",
+      },
+      {
+        id: 45,
+        question: "Select orqali object ma'lumotlarini qanday yuboramiz?",
+        options: [
+          "State ichidagi object bilan",
+          "CSS orqali",
+          "HTML orqali",
+          "className orqali",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Select qiymati objectning kerakli propertysiga yozilib yuboriladi.",
+      },
+      {
+        id: 46,
+        question: "Reactda forma yuborilgandan so'ng state qanday tozalanadi?",
+        options: [
+          "State boshlang'ich qiymatiga qaytariladi",
+          "Reload qilinadi",
+          "Input o'chiriladi",
+          "Component o'chiriladi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Submitdan keyin state boshlang'ich qiymatga o'rnatilib forma tozalanadi.",
+      },
+      {
+        id: 47,
+        question: "React formalarida Controlled Component nima?",
+        options: [
+          "State orqali boshqariladigan forma",
+          "DOM orqali boshqariladigan forma",
+          "CSS Component",
+          "Router Component",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Controlled Componentlarda input qiymati React state orqali boshqariladi.",
+      },
+      {
+        id: 48,
+        question: "React formalarida Uncontrolled Component nima?",
+        options: [
+          "DOM o'zi boshqaradigan forma",
+          "State orqali boshqariladigan forma",
+          "Redux Component",
+          "Context Component",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Uncontrolled Componentlarda input qiymati React state emas, DOM orqali boshqariladi.",
+      },
+      {
+        id: 49,
+        question: "Controlled va Uncontrolled Component o'rtasidagi farq nima?",
+        options: [
+          "Controlled state orqali, Uncontrolled esa DOM orqali boshqariladi",
+          "Farqi yo'q",
+          "Ikkalasi ham state orqali ishlaydi",
+          "Ikkalasi ham DOM orqali ishlaydi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Controlled Component React state bilan ishlaydi, Uncontrolled Component esa DOM va ref yordamida boshqariladi.",
       },
     ],
   },
@@ -1552,136 +2209,174 @@ export const topics = [
     questions: [
       {
         id: 1,
-        question: "useEffect hooki nima uchun ishlatiladi?",
+        question: "Reactda Hook nima?",
         options: [
-          "CSS stillarini yuklash uchun",
-          "Yon ta'sirlarni (side effects: API so'rovlar, DOM o'zgarishlari, timerlar) boshqarish uchun",
-          "Faqat HTML render qilish uchun",
-          "State yaratish uchun",
+          "CSS kutubxonasi",
+          "React funksional komponentlariga qo'shimcha imkoniyatlar beruvchi maxsus funksiyalar",
+          "API yaratish usuli",
+          "JavaScript frameworki",
         ],
         correctIndex: 1,
         explanation:
-          "useEffect — funktsional komponentlarda yon ta'sirlarni (side effects), ya'ni ma'lumotlarni serverdan yuklash, obunalar yaratish, DOMni qo'lda o'zgartirish yoki timerlar qo'yish kabi ishlarni bajarish uchun mo'ljallangan hookdir.",
+          "Hook — React tomonidan taqdim etilgan maxsus funksiyalar bo'lib, ular funksional komponentlarda state, lifecycle va boshqa React imkoniyatlaridan foydalanishga yordam beradi.",
       },
       {
         id: 2,
-        question:
-          "useEffect ga beriladigan dependency array (bog'liqliklar massivi) bo'sh bo'lsa (ya'ni, []), effekt qachon ishlaydi?",
+        question: "Reactda Hooklar nima uchun ishlatiladi?",
         options: [
-          "Har safar komponent re-render bo'lganda",
-          "Faqat komponent birinchi marta ekranga chiqqanda (mount bo'lganda) bir marta ishlaydi",
-          "Hech qachon ishlamaydi",
-          "Komponent ekrandan o'chayotganda",
+          "HTML yozish uchun",
+          "Server yaratish uchun",
+          "State va boshqa React imkoniyatlaridan funksional komponentlarda foydalanish uchun",
+          "CSS fayllarini ulash uchun",
         ],
-        correctIndex: 1,
+        correctIndex: 2,
         explanation:
-          "Bo'sh massiv `[]` berilsa, ushbu effekt faqat komponent birinchi marta ekranga yuklanganda (mount bo'lganda) bir marta ishlaydi va qayta renderlarda ishlamaydi.",
+          "Hooklar funksional komponentlarda state, lifecycle, context va boshqa React imkoniyatlarini ishlatish uchun mo'ljallangan.",
       },
       {
         id: 3,
-        question:
-          "useEffect hookida bog'liqliklar massivi umuman berilmasa, effekt qachon ishlaydi?",
+        question: "useEffect Hooki nima?",
         options: [
-          "Hech qachon ishlamaydi",
-          "Faqat birinchi renderda",
-          "Har bir render (va re-render)dan keyin doimiy ravishda ishlaydi",
-          "Faqat asinxron funksiyalar chaqirilganda",
+          "CSS Hooki",
+          "Side Effectlarni boshqaruvchi React Hooki",
+          "State yaratish Hooki",
+          "Router Hooki",
         ],
-        correctIndex: 2,
+        correctIndex: 1,
         explanation:
-          "Agar bog'liqliklar massivi yozilmasa, useEffect komponentning har bir renderidan keyin qayta-qayta ishlaydi.",
+          "useEffect — funksional komponentlarda Side Effectlarni (API, timer, event listener, DOM bilan ishlash va boshqalar) boshqaruvchi Hook hisoblanadi.",
       },
       {
         id: 4,
-        question:
-          "useEffect ning cleanup (tozalash) funksiyasi nima va u qanday yoziladi?",
+        question: "useEffect Hooki nima uchun ishlatiladi?",
         options: [
-          "useEffect dan qaytariladigan (return) funksiya bo'lib, u obuna yoki taymerlarni o'chirish uchun xizmat qiladi",
-          "Komponent boshida yoziladigan funksiya",
-          "Massiv ichida yoziladigan tozalash kodi",
-          "useState ichidagi setter funksiya",
+          "State yaratish uchun",
+          "Yon ta'sirlarni (Side Effects) boshqarish uchun",
+          "CSS yozish uchun",
+          "Faqat HTML yaratish uchun",
         ],
-        correctIndex: 0,
+        correctIndex: 1,
         explanation:
-          "useEffect ichidan qaytariladigan funksiya cleanup (tozalash) funksiyasi deyiladi. U komponent ekrandan o'chganda (unmount) yoki effekt qayta ishlashidan oldin keraksiz timerlar, event listenerlar yoki obunalarni tozalash uchun ishlatiladi.",
+          "useEffect API so'rovlar yuborish, event listener qo'shish, timer yaratish va boshqa Side Effectlarni bajarish uchun ishlatiladi.",
       },
       {
         id: 5,
-        question:
-          "useEffect ichidagi bog'liqliklar massiviga o'zgaruvchi berilsa (masalan, [count]), effekt qachon ishlaydi?",
+        question: "useEffect Hooki qayerdan import qilinadi?",
         options: [
-          "Faqat count 0 ga teng bo'lganda",
-          "Komponent yuklanganda va har safar count qiymati o'zgarganda",
-          "Faqat komponent ekrandan o'chganda",
-          "Har bir renderda count dan qat'iy nazar",
+          "node paketidan",
+          "vite paketidan",
+          "react paketidan",
+          "react-dom paketidan",
         ],
-        correctIndex: 1,
+        correctIndex: 2,
         explanation:
-          "Agar massiv ichiga o'zgaruvchilar qo'yilsa, effekt komponent yuklanganda hamda o'sha massivdagi o'zgaruvchilarning qiymati o'zgargandagina qayta ishga tushadi.",
+          "useEffect Hooki React kutubxonasidan import qilinadi: import { useEffect } from 'react';",
       },
       {
         id: 6,
-        question:
-          "Class komponentlaridagi componentDidMount va componentWillUnmount vazifalarini funktsional komponentlarda qaysi hook bajaradi?",
-        options: ["useState", "useContext", "useEffect", "useRef"],
+        question: "useEffect Hooki qanday yoziladi?",
+        options: [
+          "effect()",
+          "new useEffect()",
+          "useEffect(() => {}, [])",
+          "useEffect[]()",
+        ],
         correctIndex: 2,
         explanation:
-          "useEffect hooki class komponentlaridagi lifecycle (hayotiy sikl) metodlarini o'zida birlashtiradi.",
+          "useEffect callback function va dependency array qabul qiladi: useEffect(() => {}, []).",
       },
       {
         id: 7,
-        question:
-          "useEffect callback funksiyasini to'g'ridan-to'g'ri `async` deb e'lon qilish mumkinmi (masalan, useEffect(async () => ...))?",
+        question: "useEffect callback functioni nima?",
         options: [
-          "Ha, bu standart usul",
-          "Yo'q, useEffect callback funksiyasi promise qaytara olmaydi, shuning uchun async funksiyani effekt ichida alohida yaratib chaqirish kerak",
-          "Faqat ma'lumot yuklaganda mumkin",
-          "Faqat bo'sh massiv bilan mumkin",
+          "React Component",
+          "State qiymati",
+          "useEffect ichida bajariladigan funksiya",
+          "Dependency Array",
         ],
-        correctIndex: 1,
+        correctIndex: 2,
         explanation:
-          "useEffect callback funksiyasi Promise qaytargani sababli async funksiyani to'g'ridan-to'g'ri qabul qila olmaydi. Ichida oddiy funksiya ochib asynclikni ta'minlash kerak.",
+          "Callback function — useEffect ichiga birinchi argument sifatida beriladigan va Side Effectlarni bajaradigan funksiyadir.",
       },
       {
         id: 8,
-        question:
-          "Quyidagi kodda nima xato bor: `useEffect(() => { setCount(count + 1) })`?",
+        question: "useEffect ning sintaksisi qanday?",
         options: [
-          "setCount ishlamaydi",
-          "Bu kod cheksiz render (infinite loop) hosil qiladi, chunki dependency massivi yo'q va effekt ichida state o'zgartirilmoqda",
-          "Faqat asinxron xato beradi",
-          "Sintaktik xato bor",
+          "effect()",
+          "useEffect(() => { /* code */ }, [dependencies])",
+          "useEffect{}",
+          "useEffect[]",
         ],
         correctIndex: 1,
         explanation:
-          "Effekt har safar renderdan keyin ishlaydi, u stateni o'zgartiradi. State o'zgargani uchun komponent qayta render bo'ladi va effekt yana ishlaydi. Natijada cheksiz render yuzaga keladi.",
+          "useEffect ikkita parametr qabul qiladi: callback function va dependency array.",
       },
       {
         id: 9,
-        question: "useEffect qachon bajariladi?",
+        question: "useEffect ichidagi dependency array ([]) nima?",
         options: [
-          "Render jarayonidan oldin (ekranga chiqmasdan oldin)",
-          "Brauzer sahifani render qilib bo'lganidan so'ng (asinxron ravishda)",
-          "Faqat foydalanuvchi tugmani bosganda",
-          "Faqat serverda",
+          "Propslar ro'yxati",
+          "CSS klasslari",
+          "Effect qachon qayta ishlashini belgilovchi massiv",
+          "State saqlovchi massiv",
         ],
-        correctIndex: 1,
+        correctIndex: 2,
         explanation:
-          "React renderlash ishlarini tugatib, DOMni yangilab bo'lgach va foydalanuvchiga sahifa ko'ringanidan keyin asinxron ravishda useEffect effektlarini ishga tushiradi.",
+          "Dependency array useEffect qaysi qiymatlar o'zgarganda qayta ishga tushishini belgilaydi.",
       },
       {
         id: 10,
-        question:
-          "React 18 Strict Mode da development rejimida useEffect necha marta ishlaydi?",
+        question: "useEffect ga dependency array ([]) berilmasa nima bo'ladi?",
         options: [
-          "1 marta",
-          "2 marta (ishlaydi, cleanup bo'ladi, yana qayta ishlaydi - tozalash kodlari to'g'ri yozilganini tekshirish uchun)",
-          "Hech qachon",
-          "3 marta",
+          "Faqat state o'zgarganda ishlaydi",
+          "Har bir renderdan keyin ishlaydi",
+          "Hech qachon ishlamaydi",
+          "Faqat bir marta ishlaydi",
         ],
         correctIndex: 1,
         explanation:
-          "Strict Mode loyihadagi xatoliklar va tozalash (cleanup) funksiyalari to'g'ri yozilganini tekshirish uchun mount/unmount siklini simulyatsiya qilib useEffectni ikki marta ishga tushiradi.",
+          "Dependency array yozilmasa useEffect har bir render va re-renderdan keyin ishlaydi.",
+      },
+      {
+        id: 11,
+        question:
+          "useEffect ga bo'sh dependency array ([]) berilsa qachon ishlaydi?",
+        options: [
+          "Faqat state o'zgarganda",
+          "Faqat komponent birinchi marta render bo'lganda",
+          "Faqat komponent o'chirilganda",
+          "Har safar render bo'lganda",
+        ],
+        correctIndex: 1,
+        explanation:
+          "Bo'sh dependency array (`[]`) useEffectni faqat komponent mount bo'lganda bir marta ishga tushiradi.",
+      },
+      {
+        id: 12,
+        question:
+          "useEffect ga dependency array ichida o'zgaruvchi (masalan, [count]) berilsa qachon ishlaydi?",
+        options: [
+          "Har safar render bo'lganda",
+          "Komponent yuklanganda va count o'zgarganda",
+          "Hech qachon ishlamaydi",
+          "Faqat komponent o'chirilganda",
+        ],
+        correctIndex: 1,
+        explanation:
+          "Dependency array ichidagi qiymat o'zgarganida useEffect qayta ishga tushadi.",
+      },
+      {
+        id: 13,
+        question: "useEffect callback functioni ichida nimalar yoziladi?",
+        options: [
+          "Faqat JSX Componentlar",
+          "API so'rovlar, timerlar, event listenerlar, localStorage, DOM bilan ishlash kabi Side Effect kodlari",
+          "Faqat CSS",
+          "Faqat HTML",
+        ],
+        correctIndex: 1,
+        explanation:
+          "useEffect callback functioni ichida Side Effectlar yoziladi. Masalan: API chaqirish, setTimeout, setInterval, event listener qo'shish, localStorage bilan ishlash yoki DOMni boshqarish.",
       },
     ],
   },
