@@ -15,125 +15,437 @@ export const topics = [
     questions: [
       {
         id: 1,
-        question: "React nima?",
+        question: "ReactJS nima?",
         options: [
           "Foydalanuvchi interfeyslarini yaratish uchun JavaScript kutubxonasi",
           "Dasturlash tili",
-          "CSS freymvorki",
           "Ma'lumotlar bazasi",
+          "CSS freymvorki",
         ],
         correctIndex: 0,
         explanation:
-          "React — bu foydalanuvchi interfeyslarini (UI) yaratish uchun ishlatiladigan, Meta (Facebook) tomonidan ishlab chiqilgan va ochiq manbali JavaScript kutubxonasidir.",
+          "ReactJS — Meta (Facebook) tomonidan yaratilgan foydalanuvchi interfeyslarini (UI) yaratish uchun JavaScript kutubxonasidir.",
       },
       {
         id: 2,
-        question: "React kim/qaysi kompaniya tomonidan ishlab chiqilgan?",
-        options: ["Google", "Microsoft", "Meta (Facebook)", "Twitter"],
-        correctIndex: 2,
+        question: "SPA (Single Page Application) nima?",
+        options: [
+          "Bir marta HTML yuklab ishlaydigan ilova",
+          "Har sahifada yangi HTML yuklaydigan sayt",
+          "Faqat bitta rasmli sayt",
+          "Backend dasturi",
+        ],
+        correctIndex: 0,
         explanation:
-          "React 2013-yilda Facebook (hozirgi Meta) muhandisi Jordan Walke tomonidan yaratilgan va hozirda ham Meta va faol hamjamiyat tomonidan qo'llab-quvvatlanadi.",
+          "SPA bir marta HTML yuklaydi va keyingi o'zgarishlarni JavaScript yordamida amalga oshiradi.",
       },
       {
         id: 3,
-        question: "SPA (Single Page Application) nima?",
+        question: "React yaratuvchisi kim?",
         options: [
-          "Faqat bir sahifali va butun sahifani yangilamasdan ishlovchi ilova",
-          "Faqat bir dona rasm bo'lgan sayt",
-          "Har bir bosishda serverdan yangi HTML yuklovchi sayt",
-          "CSS ishlatilmaydigan sayt",
+          "Jordan Walke",
+          "Evan You",
+          "Brendan Eich",
+          "Guido van Rossum",
         ],
         correctIndex: 0,
         explanation:
-          "SPA (Single Page Application) — faqat bitta HTML sahifasini yuklaydigan va foydalanuvchi navigatsiya qilganda butun sahifani yangilamasdan, faqat kerakli qismlarini dinamik yangilaydigan veb-ilovadir.",
+          "React 2013-yilda Facebook (Meta) muhandisi Jordan Walke tomonidan yaratilgan.",
       },
       {
         id: 4,
-        question: "Virtual DOM nima?",
+        question: "React saytda qanday ishlatiladi?",
         options: [
-          "Brauzerning haqiqiy DOMi",
-          "Haqiqiy DOMning xotiradagi yengil nusxasi (kopi)",
-          "CSS stillarini saqlaydigan xotira",
-          "Serverdagi ma'lumotlar bazasi",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Virtual DOM — bu haqiqiy DOMning xotiradagi (JS obyekt ko'rinishidagi) yengil nusxasidir. React o'zgarishlarni avval Virtual DOMda hisoblab, keyin haqiqiy DOMga minimal ta'sir bilan o'tkazadi.",
-      },
-      {
-        id: 5,
-        question: "Virtual DOM ishlatilishining asosiy sababi nima?",
-        options: [
-          "Xavfsizlikni oshirish",
-          "Haqiqiy DOMni yangilash sekin bo'lgani uchun tezlikni oshirish",
-          "Fayllar hajmini kamaytirish",
-          "Server xarajatlarini tejash",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Haqiqiy DOM bilan bevosita va tez-tez ishlash juda sekin. Virtual DOM orqali React faqatgina o'zgargan qismlarni aniqlab (diffing), faqat o'sha joylarni haqiqiy DOMda yangilaydi (reconciliation).",
-      },
-      {
-        id: 6,
-        question: "Reactda deklarativ (declarative) yondashuv nima?",
-        options: [
-          "Dasturchi interfeys qanday ko'rinishda bo'lishini tasvirlaydi, o'zgarishlarni React o'zi boshqaradi",
-          "Dasturchi sahifa qanday o'zgarishini bosqichma-bosqich yozadi",
-          "Faqat o'zgaruvchilarni e'lon qilish",
-          "Kodni faqat serverda yozish",
+          "CDN yoki Build Tool (Vite, CRA) orqali",
+          "Faqat PHP bilan",
+          "Faqat CSS orqali",
+          "Faqat Node.js serverida",
         ],
         correctIndex: 0,
         explanation:
-          "Deklarativ yondashuvda biz 'nima qilish kerakligini' yozamiz (masalan: agar isLoading true bo'lsa, yuklash aylanasi chiqsin). 'Qanday qilishni' (DOM elementini o'chirish/qo'shish) React o'zi hal qiladi.",
+          "React kichik loyihalarda CDN orqali, katta loyihalarda esa Vite yoki boshqa build tool orqali ishlatiladi.",
+      },
+      {
+        id: 5,
+        question: "React HTML faylini serverdan necha marta yuklaydi?",
+        options: [
+          "1 marta",
+          "Har sahifa almashtirilganda",
+          "10 marta",
+          "Hech qachon",
+        ],
+        correctIndex: 0,
+        explanation: "SPA bo'lgani sababli HTML faqat bir marta yuklanadi.",
+      },
+      {
+        id: 6,
+        question: "React CDN linklari odatda necha xil bo'ladi?",
+        options: ["2 xil (React va ReactDOM)", "1 xil", "3 xil", "4 xil"],
+        correctIndex: 0,
+        explanation:
+          "React ishlashi uchun React va ReactDOM CDN fayllari kerak bo'ladi.",
       },
       {
         id: 7,
-        question: "React qanday arxitektura modeliga asoslangan?",
+        question: "Babel nima?",
         options: [
-          "Monolitik model",
-          "Komponentli arxitektura",
-          "MVC (Model-View-Controller) modeli",
-          "Mikroservislar",
+          "JavaScript transpileri",
+          "CSS kutubxonasi",
+          "Ma'lumotlar bazasi",
+          "Web server",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "React va undagi UI elementlari butunlay komponentlar (Component-based) arxitekturasiga asoslangan. Sahifaning har bir qismi mustaqil komponent sifatida yoziladi va qayta ishlatiladi.",
+          "Babel zamonaviy JavaScript va JSX kodlarini eski brauzerlar tushunadigan JavaScriptga aylantiradi.",
       },
       {
         id: 8,
-        question:
-          "Hozirgi kunda yangi React loyihasini tezkor yaratish uchun qaysi vosita tavsiya etiladi?",
-        options: ["Create React App", "Vite", "Webpack", "Gulp"],
-        correctIndex: 1,
-        explanation:
-          "Hozirgi kunda Create React App (CRA) eskirgan deb hisoblanadi. Vite tezligi va qulayligi tufayli eng ommabop loyiha yig'uvchi asbob hisoblanadi.",
+        question: "Terminal nima?",
+        options: [
+          "Buyruqlar yoziladigan konsol",
+          "Kod muharriri",
+          "Brauzer",
+          "Framework",
+        ],
+        correctIndex: 0,
+        explanation: "Terminal orqali operatsion tizimga buyruqlar beriladi.",
       },
       {
         id: 9,
-        question:
-          "Reactda ma'lumotlar oqimi (data flow) qanday yo'nalishga ega?",
+        question: "`node -v` buyrug'i nima qiladi?",
         options: [
-          "Ikki tomonlama (two-way)",
-          "Faqat pastdan yuqoriga",
-          "Bir tomonlama (one-way) - otadan bolaga",
-          "Ma'lumotlar oqimi mavjud emas",
+          "Node.js versiyasini ko'rsatadi",
+          "Node.js o'rnatadi",
+          "Node.js o'chiradi",
+          "npm ni ishga tushiradi",
         ],
-        correctIndex: 2,
-        explanation:
-          "Reactda ma'lumotlar faqat bir yo'nalishda (unidirectional data flow) oqadi: ota komponentdan bola komponentga props orqali yuboriladi.",
+        correctIndex: 0,
+        explanation: "node -v o'rnatilgan Node.js versiyasini chiqaradi.",
       },
       {
         id: 10,
-        question: "React nima uchun dasturlash tili emas?",
+        question: "`npm -v` nima qiladi?",
         options: [
-          "Chunki u faqat brauzerda ishlaydi",
-          "Chunki u JavaScript sintaksisiga asoslangan kutubxonadir",
-          "Chunki u dizayn chizish uchun",
-          "Chunki u faqat serverda ishlaydi",
+          "npm versiyasini ko'rsatadi",
+          "Paket o'rnatadi",
+          "React yaratadi",
+          "Node versiyasini yangilaydi",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
+        explanation: "npm -v npm versiyasini ko'rsatadi.",
+      },
+      {
+        id: 11,
+        question: "`yarn -v` nima qiladi?",
+        options: [
+          "Yarn versiyasini ko'rsatadi",
+          "React yaratadi",
+          "Node o'rnatadi",
+          "Git ishga tushiradi",
+        ],
+        correctIndex: 0,
+        explanation: "yarn -v o'rnatilgan Yarn versiyasini ko'rsatadi.",
+      },
+      {
+        id: 12,
+        question: "`npx create-react-app` nima qiladi?",
+        options: [
+          "Yangi React loyihasini yaratadi",
+          "Node.js o'rnatadi",
+          "Git o'rnatadi",
+          "HTML yaratadi",
+        ],
+        correctIndex: 0,
         explanation:
-          "React dasturlash tili emas, balki JavaScript tilida yozilgan va JavaScript bilan ishlaydigan kutubxonadir.",
+          "npx create-react-app yangi React loyihasi yaratish uchun ishlatiladi.",
+      },
+      {
+        id: 13,
+        question:
+          "React loyihasi papka nomini katta harf bilan boshlash tavsiya etiladimi?",
+        options: ["Yo'q", "Ha", "Faqat Windowsda", "Faqat Macda"],
+        correctIndex: 0,
+        explanation:
+          "Papka nomini kichik harflarda va bo'sh joysiz yozish tavsiya etiladi.",
+      },
+      {
+        id: 14,
+        question: "Har safar create-react-app ishlatishda internet kerakmi?",
+        options: ["Ha", "Yo'q", "Faqat Windowsda", "Faqat npm yangilanganda"],
+        correctIndex: 0,
+        explanation:
+          "Paketlarni npm registridan yuklab olishi sababli internet talab qilinadi.",
+      },
+      {
+        id: 15,
+        question: "`clear` buyrug'i nima qiladi?",
+        options: [
+          "Terminal ekranini tozalaydi",
+          "Fayllarni o'chiradi",
+          "Reactni o'chiradi",
+          "Node ni tozalaydi",
+        ],
+        correctIndex: 0,
+        explanation: "clear terminaldagi eski yozuvlarni tozalaydi.",
+      },
+      {
+        id: 16,
+        question: "CRA va Vite orasidagi asosiy farq nima?",
+        options: [
+          "Vite tezroq ishlaydi",
+          "CRA tezroq ishlaydi",
+          "Ikkalasi bir xil",
+          "CRA TypeScriptni qo'llamaydi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Vite zamonaviy bundler bo'lib, CRA ga qaraganda ancha tez ishlaydi.",
+      },
+      {
+        id: 17,
+        question: "`dir` va `ls` buyruqlari nima qiladi?",
+        options: [
+          "Joriy papkadagi fayllarni ko'rsatadi",
+          "Papka yaratadi",
+          "Papkani o'chiradi",
+          "Serverni ishga tushiradi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Windowsda dir, Linux va Mac'da esa ls joriy papkadagi fayllarni ko'rsatadi.",
+      },
+      {
+        id: 18,
+        question: "Export va Import nima uchun ishlatiladi?",
+        options: [
+          "Kodlarni boshqa fayllarga ulash uchun",
+          "Internetga ulanish uchun",
+          "Node o'rnatish uchun",
+          "CSS yozish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Export fayldan tashqariga chiqaradi, Import esa boshqa fayldan olib keladi.",
+      },
+      {
+        id: 19,
+        question: "Virtual DOM nima?",
+        options: [
+          "DOMning xotiradagi nusxasi",
+          "Brauzer oynasi",
+          "Serverdagi DOM",
+          "CSS fayli",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Virtual DOM React ishlashini tezlashtirish uchun haqiqiy DOMning virtual nusxasidir.",
+      },
+      {
+        id: 20,
+        question: "JSX nimaning qisqartmasi?",
+        options: [
+          "JavaScript XML",
+          "Java Syntax XML",
+          "JSON XML",
+          "JavaScript Extension",
+        ],
+        correctIndex: 0,
+        explanation:
+          "JSX — JavaScript XML bo'lib, JavaScript ichida HTMLga o'xshash kod yozish imkonini beradi.",
+      },
+      {
+        id: 21,
+        question: "README.md faylining vazifasi nima?",
+        options: [
+          "Loyiha haqida ma'lumot beradi",
+          "CSS saqlaydi",
+          "Rasmlarni saqlaydi",
+          "Serverni ishga tushiradi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "README.md loyihaning tavsifi, o'rnatilishi va ishlatilishini tushuntiradi.",
+      },
+      {
+        id: 22,
+        question: "node_modules papkasi nima?",
+        options: [
+          "O'rnatilgan paketlar saqlanadigan papka",
+          "React kodi",
+          "HTML fayllari",
+          "CSS fayllari",
+        ],
+        correctIndex: 0,
+        explanation:
+          "node_modules ichida npm yoki yarn orqali o'rnatilgan barcha kutubxonalar joylashadi.",
+      },
+      {
+        id: 23,
+        question: "public papkasining vazifasi nima?",
+        options: [
+          "Statik fayllarni saqlaydi",
+          "React komponentlari",
+          "API fayllari",
+          "Node paketlari",
+        ],
+        correctIndex: 0,
+        explanation:
+          "public papkasida favicon, rasm va boshqa statik fayllar saqlanadi.",
+      },
+      {
+        id: 24,
+        question: "src papkasida nimalar bo'ladi?",
+        options: [
+          "React ilovasining asosiy kodlari",
+          "Node paketlari",
+          "Git fayllari",
+          "Brauzer sozlamalari",
+        ],
+        correctIndex: 0,
+        explanation:
+          "src ichida komponentlar, CSS, JavaScript va boshqa asosiy kodlar yoziladi.",
+      },
+      {
+        id: 25,
+        question: ".gitignore fayli nima vazifani bajaradi?",
+        options: [
+          "Git kuzatmasligi kerak bo'lgan fayllarni belgilaydi",
+          "Git o'rnatadi",
+          "Reactni ishga tushiradi",
+          "Commit yaratadi",
+        ],
+        correctIndex: 0,
+        explanation:
+          ".gitignore orqali Git kerak bo'lmagan fayllarni kuzatmaydi.",
+      },
+      {
+        id: 26,
+        question: "ESLint nima?",
+        options: [
+          "JavaScript kodini tekshiruvchi vosita",
+          "CSS Framework",
+          "Server",
+          "Database",
+        ],
+        correctIndex: 0,
+        explanation:
+          "ESLint koddagi xatolarni va kod yozish qoidalarini tekshiradi.",
+      },
+      {
+        id: 27,
+        question: "package.json nima?",
+        options: [
+          "Loyihaning asosiy konfiguratsiya fayli",
+          "HTML fayli",
+          "CSS fayli",
+          "React komponenti",
+        ],
+        correctIndex: 0,
+        explanation:
+          "package.json ichida loyiha nomi, skriptlar va dependencylar saqlanadi.",
+      },
+      {
+        id: 28,
+        question: "package-lock.json nima?",
+        options: [
+          "Paketlarning aniq versiyalarini saqlaydi",
+          "React kodi",
+          "CSS fayli",
+          "Git konfiguratsiyasi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "package-lock.json dependencylarning aniq versiyalarini saqlaydi.",
+      },
+      {
+        id: 29,
+        question: "dependencies nima?",
+        options: [
+          "Loyihada ishlatiladigan asosiy paketlar",
+          "Faqat test paketlari",
+          "Git fayllari",
+          "Node versiyasi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "dependencies ilova ishlashi uchun zarur kutubxonalarni saqlaydi.",
+      },
+      {
+        id: 30,
+        question: "devDependencies nima?",
+        options: [
+          "Faqat dasturlash vaqtida kerak bo'ladigan paketlar",
+          "Server paketlari",
+          "Database paketlari",
+          "React komponentlari",
+        ],
+        correctIndex: 0,
+        explanation:
+          "devDependencies faqat development jarayonida ishlatiladigan paketlardir.",
+      },
+      {
+        id: 31,
+        question: "`npm start` va `npm run start` orasida farq bormi?",
+        options: [
+          "Farqi yo'q",
+          "Katta farq bor",
+          "Faqat Windowsda ishlaydi",
+          "Faqat Macda ishlaydi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "start maxsus script bo'lgani uchun ikkala buyruq ham bir xil natija beradi.",
+      },
+      {
+        id: 32,
+        question: "Bundle.js nima?",
+        options: [
+          "Birlashtirilgan JavaScript fayli",
+          "CSS fayli",
+          "HTML fayli",
+          "React komponenti",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Bundler barcha JavaScript fayllarni bitta yoki bir nechta bundle fayllarga birlashtiradi.",
+      },
+      {
+        id: 33,
+        question: "`defer` atributi nima vazifani bajaradi?",
+        options: [
+          "HTML yuklangandan keyin scriptni ishga tushiradi",
+          "Scriptni darhol ishga tushiradi",
+          "CSS yuklaydi",
+          "Reactni o'chiradi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "defer HTML parsing tugagandan keyin JavaScriptni ishga tushiradi.",
+      },
+      {
+        id: 34,
+        question: "3000-port nima?",
+        options: [
+          "React development serverining odatiy porti",
+          "Internet tezligi",
+          "RAM hajmi",
+          "CPU yadrosi",
+        ],
+        correctIndex: 0,
+        explanation: "CRA odatda localhost:3000 portida ishga tushadi.",
+      },
+      {
+        id: 35,
+        question: "Port nima?",
+        options: [
+          "Kompyuterdagi xizmatlar ishlatadigan mantiqiy aloqa nuqtasi",
+          "USB qurilma",
+          "Operativ xotira",
+          "Qattiq disk",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Port — tarmoq orqali dasturlar o'zaro aloqa qiladigan mantiqiy raqamli manzildir.",
       },
     ],
   },
@@ -150,127 +462,175 @@ export const topics = [
     questions: [
       {
         id: 1,
-        question: "JSX nima?",
+        question: "Component nima?",
         options: [
-          "JavaScript XML — JS fayl ichida HTML kabi kod yozish imkonini beruvchi sintaktik kengaytma",
-          "Yangi turdagi ma'lumotlar turi",
-          "JavaScript kutubxonasi",
-          "Dizayn standarti",
+          "UI ning mustaqil va qayta ishlatiladigan qismi",
+          "JavaScript o'zgaruvchisi",
+          "CSS fayli",
+          "Ma'lumotlar bazasi",
         ],
         correctIndex: 0,
         explanation:
-          "JSX — JavaScript XML degani. U JavaScript fayllari ichida xuddi HTML kabi kod yozish imkoniyatini beradi.",
+          "Component — React ilovasining mustaqil, qayta ishlatiladigan UI qismi. Har bir komponent o'zining HTML (JSX), CSS va JavaScript logikasiga ega bo'lishi mumkin.",
       },
       {
         id: 2,
-        question: "JSX brauzer tomonidan to'g'ridan-to'g'ri o'qiladimi?",
-        options: [
-          "Ha, barcha brauzerlar uni to'g'ridan-to'g'ri o'qiydi",
-          "Yo'q, u Babel kabi transpaylerlar yordamida JavaScriptga o'girilishi shart",
-          "Faqat Chrome o'qiy oladi",
-          "Faqat Safari o'qiy oladi",
-        ],
-        correctIndex: 1,
+        question: "Reactda componentlar necha xil usulda yaratiladi?",
+        options: ["2 xil", "3 xil", "4 xil", "1 xil"],
+        correctIndex: 0,
         explanation:
-          "Brauzerlar JSXni tushunmaydi. Loyihani yig'ish jarayonida Babel yoki shunga o'xshash transpaylerlar uni oddiy JavaScript funksiyalariga (React.createElement) o'giriydi.",
+          "Reactda componentlar asosan 2 xil usulda yaratiladi: Function Component va Class Component.",
       },
       {
         id: 3,
-        question: "JSXda JavaScript ifodalarini qanday qavslar ichida yozamiz?",
+        question: "Class Component nima?",
         options: [
-          'Qo\'shtirnoq ichida: ""',
-          "Burchakli qavslar ichida: <>",
-          "Gulli qavslar ichida: {}",
-          "Kvadrat qavslar ichida: []",
+          "JavaScript class orqali yaratiladigan React component",
+          "CSS klassi",
+          "HTML elementi",
+          "Hook turi",
         ],
-        correctIndex: 2,
+        correctIndex: 0,
         explanation:
-          "JSX ichida istalgan JavaScript o'zgaruvchisi yoki ifodasini yozish uchun gulli qavslar `{}` dan foydalanamiz.",
+          "Class Component ES6 class yordamida yaratiladi va React.Component dan meros oladi. Hozirgi kunda Function Component ko'proq tavsiya etiladi.",
       },
       {
         id: 4,
-        question:
-          "JSXda oddiy HTML dagi 'class' atributi o'rniga nima ishlatiladi?",
-        options: ["class", "className", "class_name", "clazz"],
-        correctIndex: 1,
+        question: "`extends` kalit so'zi nima vazifani bajaradi?",
+        options: [
+          "Boshqa classdan meros oladi",
+          "Componentni o'chiradi",
+          "Import qiladi",
+          "CSS ulaydi",
+        ],
+        correctIndex: 0,
         explanation:
-          "JavaScriptda `class` kalit so'zi klass yaratish uchun band qilingan, shu sababli JSX da uning o'rniga `className` ishlatiladi.",
+          "`extends` JavaScriptda bir classning boshqa classdan xususiyat va metodlarni meros olishini ta'minlaydi. Reactda Class Component `React.Component`dan meros oladi.",
       },
       {
         id: 5,
-        question: "JSXda inline stillar (inline styles) qanday beriladi?",
+        question: "Function Component nima?",
         options: [
-          'style="color: red"',
-          "style={{ color: 'red' }}",
-          "style={color: red}",
-          "style=[color: red]",
+          "JavaScript function orqali yaratiladigan React component",
+          "Oddiy CSS funksiyasi",
+          "HTML tegi",
+          "Node.js moduli",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "JSXda stillar obyekt shaklida beriladi. Tashqi qavs JavaScript ifodasi ekanini, ichki qavs esa CSS xossalari yozilgan obyekt ekanini bildiradi.",
+          "Function Component oddiy JavaScript funksiyasi bo'lib, JSX qaytaradi. Zamonaviy React loyihalarida asosan shu usul ishlatiladi.",
       },
       {
         id: 6,
-        question:
-          "JSXda self-closing (o'zi yopiladigan) teglarni (masalan, <br>, <img>) yopish shartmi?",
+        question: "JSX nima?",
         options: [
-          "Yo'q, shart emas",
-          "Ha, oxiriga slash qo'yib yopish shart (masalan: <br />)",
-          "Faqat rasmlarni yopish shart",
-          "Bu ixtiyoriy",
+          "JavaScript XML sintaksisi",
+          "CSS Framework",
+          "Java kutubxonasi",
+          "Database",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          'JSXda barcha teglar yopilishi shart. O\'zi yopiladigan teglarni ham oxirida slash bilan yopish kerak: `<br />`, `<img src="..." />`.',
+          "JSX (JavaScript XML) JavaScript ichida HTMLga o'xshash sintaksis yozish imkonini beradi.",
       },
       {
         id: 7,
-        question:
-          "JSX elementining eng tashqi (root) qismida nechta element bo'lishi mumkin?",
-        options: [
-          "Faqat 1 ta",
-          "Cheksiz ko'p",
-          "Kamida 2 ta",
-          "Hech qanday element bo'lmasligi ham mumkin",
-        ],
+        question: "JSX expressionida nechta ota (root) element bo'lishi kerak?",
+        options: ["1 ta", "2 ta", "3 ta", "Cheklanmagan"],
         correctIndex: 0,
         explanation:
-          "JSX komponenti har doim bitta root element qaytarishi shart. Agar bir nechta element bo'lsa, ularni bitta div yoki bo'sh Fragment (`<>...</>`) ichiga o'rash kerak.",
+          "Har bir JSX expression faqat bitta root elementni qaytarishi kerak.",
       },
       {
         id: 8,
-        question: "React Fragment (`<>...</>`) nima uchun ishlatiladi?",
+        question: "Nima uchun JSXda bitta root element bo'lishi kerak?",
         options: [
-          "DOMda ortiqcha element hosil qilmasdan bir nechta elementlarni guruhlash uchun",
-          "Sahifani tezroq yuklash uchun",
-          "Dizayn berish uchun",
-          "Ma'lumot saqlash uchun",
+          "React faqat bitta elementni return qila oladi",
+          "HTML shunday talab qiladi",
+          "CSS uchun",
+          "JavaScript cheklovi",
         ],
         correctIndex: 0,
         explanation:
-          "React Fragment DOMda ortiqcha `div` yoki boshqa tugunlarni hosil qilmasdan JSX elementlarini bitta rootga o'rash uchun ishlatiladi.",
+          "Component faqat bitta qiymat qaytaradi. Bir nechta element kerak bo'lsa, ular bitta ota element yoki React Fragment ichiga o'raladi.",
       },
       {
         id: 9,
-        question:
-          "JSXda CSS xossalari (masalan, background-color) qanday formatda yoziladi?",
+        question: "Reactda `className` nima uchun ishlatiladi?",
         options: [
-          "Kebab-case: background-color",
-          "CamelCase: backgroundColor",
-          "Faqat kichik harflarda",
-          "Snake_case: background_color",
+          "CSS class berish uchun",
+          "JavaScript class yaratish uchun",
+          "React Hook",
+          "Import qilish uchun",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "JSX obyekt stillarida CSS kalit so'zlari camelCase uslubida yoziladi. Masalan: `backgroundColor`, `fontSize`, `borderRadius`.",
+          "`class` JavaScript kalit so'zi bo'lgani sababli Reactda uning o'rniga `className` ishlatiladi.",
       },
       {
         id: 10,
-        question: "JSX da izohlar (comments) qanday yoziladi?",
-        options: ["// izoh", "<!-- izoh -->", "{/* izoh */}", "/* izoh */"],
-        correctIndex: 2,
+        question: "React.StrictMode nima?",
+        options: [
+          "Xatolarni aniqlashga yordam beruvchi development rejimi",
+          "Production server",
+          "CSS Framework",
+          "State Management kutubxonasi",
+        ],
+        correctIndex: 0,
         explanation:
-          "JSX ichida izoh yozish uchun uni JavaScript ifodasi sifatida gulli qavsga olib, ko'p qatorli izoh belgisidan foydalanamiz: `{/* izoh */}`.",
+          "React.StrictMode faqat development rejimida ishlaydi va mumkin bo'lgan muammolarni oldindan aniqlashga yordam beradi.",
+      },
+      {
+        id: 11,
+        question: "React componentlari qanday nomlanishi kerak?",
+        options: [
+          "PascalCase (katta harf bilan)",
+          "Faqat kichik harf bilan",
+          "Faqat son bilan",
+          "Istalgan belgilar bilan",
+        ],
+        correctIndex: 0,
+        explanation:
+          "React componentlari PascalCase usulida yoziladi. Masalan: Header, UserCard, ProductList.",
+      },
+      {
+        id: 12,
+        question: "`export` nima?",
+        options: [
+          "Fayldan tashqariga qiymat chiqaradi",
+          "Boshqa fayldan olib keladi",
+          "Componentni o'chiradi",
+          "CSS ulaydi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "`export` orqali funksiya, class yoki o'zgaruvchini boshqa fayllarda foydalanish uchun chiqaramiz.",
+      },
+      {
+        id: 13,
+        question: "`import` nima?",
+        options: [
+          "Boshqa fayldan export qilingan qiymatni olib keladi",
+          "Component yaratadi",
+          "State yaratadi",
+          "CSS yozadi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "`import` boshqa fayldan export qilingan funksiya, component yoki o'zgaruvchini olib kelish uchun ishlatiladi.",
+      },
+      {
+        id: 14,
+        question: "`export default` nima?",
+        options: [
+          "Fayldan bitta asosiy qiymatni export qiladi",
+          "Bir nechta qiymatni export qiladi",
+          "Import o'rniga ishlatiladi",
+          "Componentni o'chiradi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "`export default` yordamida fayldan bitta asosiy qiymat export qilinadi va uni import qilganda istalgan nom bilan chaqirish mumkin.",
       },
     ],
   },
@@ -288,7 +648,7 @@ export const topics = [
       {
         id: 1,
         question:
-          "Vite loyihasida mahalliy rasmni components ichida ishlatish uchun qanday import qilinadi?",
+          "Vite loyihasida mahalliy rasmni component ichida qanday import qilinadi?",
         options: [
           '<img src="./image.png" />',
           "import img from './image.png' va <img src={img} />",
@@ -297,36 +657,49 @@ export const topics = [
         ],
         correctIndex: 1,
         explanation:
-          "Vite loyihalarida rasmlarni JS moduli kabi import qilib, so'ng JSX da src ga o'zgaruvchi sifatida berish eng to'g'ri va xavfsiz yo'ldir.",
+          "Vite loyihalarida rasmlarni JavaScript moduli sifatida import qilib, JSX ichida src atributiga berish tavsiya etiladi.",
       },
       {
         id: 2,
         question: "Public papkasidagi rasmlarni qanday chaqiramiz?",
         options: [
           "import orqali",
-          "To'g'ridan-to'g'ri absolyut yo'l orqali: `/image.png`",
+          "To'g'ridan-to'g'ri absolyut yo'l orqali: /image.png",
           "require('/public/image.png')",
-          "Public dagi rasmlarni ishlatib bo'lmaydi",
+          "Public papkasidagi rasmlarni ishlatib bo'lmaydi",
         ],
         correctIndex: 1,
         explanation:
-          "`public` papkasidagi fayllar o'zgarishsiz build papkasiga ko'chiriladi. Shuning uchun ularni import qilmasdan, `/fayl_nomi` ko'rinishida chaqirish mumkin.",
+          "public papkasidagi fayllar import qilinmaydi. Ular /image.png ko'rinishida chaqiriladi.",
       },
       {
         id: 3,
-        question: "CSS Modules nima uchun ishlatiladi?",
+        question: "Reactda background (fon) rasmi qanday qo'yiladi?",
         options: [
-          "CSS ni o'chiradigan kutubxona",
-          "Klass nomlarini unikal qilib, stillar boshqa komponentlarga tasodifan ta'sir qilib ketishini oldini olish uchun",
-          "Faqat animatsiyalar uchun",
-          "Bootstrap klasslari to'plami",
+          "background-image yoki backgroundImage orqali",
+          "Faqat <img> tegi orqali",
+          "Faqat public papkasida bo'lsa",
+          "Background rasm qo'yib bo'lmaydi",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "CSS Modules fayl nomiga `.module.css` deb yozib import qilinadi. U avtomatik ravishda har bir klassga unikal identifikator qo'shadi, natijada klasslar to'qnashmaydi.",
+          "Background rasmi CSS yoki inline style orqali backgroundImage: `url(...)` yordamida beriladi.",
       },
       {
         id: 4,
+        question: "React Icons qanday o'rnatiladi?",
+        options: [
+          "npm install react-icons",
+          "npm install icons",
+          "npm install react-icon",
+          "npm install icon-react",
+        ],
+        correctIndex: 0,
+        explanation:
+          "React Icons kutubxonasini o'rnatish uchun npm install react-icons buyrug'i ishlatiladi.",
+      },
+      {
+        id: 5,
         question:
           "React Icons kutubxonasidan ma'lum bir ikonkani qanday import qilamiz?",
         options: [
@@ -337,85 +710,118 @@ export const topics = [
         ],
         correctIndex: 1,
         explanation:
-          "React Icons dan kerakli ikonkalar guruhidan nomlangan import yordamida olinadi: `import { FaBeer } from 'react-icons/fa`.",
-      },
-      {
-        id: 5,
-        question: "Styled Components nima?",
-        options: [
-          "Tayyor tugmalar to'plami",
-          "JavaScript fayllari ichida CSS yozish imkonini beruvchi CSS-in-JS kutubxonasi",
-          "Faqat Tailwind klasslari",
-          "Reactning ichki stillash tizimi",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Styled Components — komponentga bog'langan stillarni yozish uchun keng qo'llaniladigan kutubxonadir: `const Button = styled.button`color: red;``.",
+          "Kerakli ikonka tegishli paketdan nomlangan import orqali olinadi.",
       },
       {
         id: 6,
         question:
-          "Styled Components da props orqali dinamik stillar berish mumkinmi?",
+          "React Icons'dan ikonka komponenti JSX ichida qanday ishlatiladi?",
         options: [
-          "Yo'q, stillar o'zgarmas bo'ladi",
-          "Ha, props qabul qilib, unga qarab CSS qiymatlarini o'zgartirish mumkin",
-          "Faqat klasslarda mumkin",
-          "Faqat useState bilan mumkin",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Styled Components props qabul qila oladi. Masalan: `color: ${props => props.primary ? 'blue' : 'gray'}`.",
-      },
-      {
-        id: 7,
-        question:
-          "React loyihalarida SASS (SCSS) preprotsessoridan foydalanish uchun nima qilish kerak?",
-        options: [
-          "Hech narsa, u avtomatik ishlaydi",
-          "Loyihaga `sass` paketini (npm i sass) o'rnatish kifoya, keyin .scss fayllarini import qilsa bo'ladi",
-          "Webpack sozlash shart",
-          "Buning iloji yo'q",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Vite Sass ni avtomatik qo'llab-quvvatlaydi. Loyihaga `sass` dev dependency paketini o'rnatish kifoya.",
-      },
-      {
-        id: 8,
-        question:
-          "CSS Modules faylida qanday qilib klassni global qilish mumkin?",
-        options: [
-          ":global(.my-class) { ... } ko'rinishida yozish orqali",
-          "Klass nomini katta harfda yozib",
-          "Faqat divga yozib",
-          "Buni iloji yo'q",
+          "<FaBeer />",
+          "<icon FaBeer />",
+          "<Icon name='FaBeer' />",
+          "<img src='FaBeer' />",
         ],
         correctIndex: 0,
         explanation:
-          "CSS Modules ichida `:global` kalit so'zi bilan yozilgan sinflar transpayl bo'lganda unikal nomga o'zgartirilmaydi va oddiy global CSS klassi kabi ishlaydi.",
+          "Import qilingan ikonka oddiy React component kabi JSX ichida ishlatiladi.",
+      },
+      {
+        id: 7,
+        question: "Reactda necha xil usulda style berish mumkin?",
+        options: ["4 xil", "2 xil", "3 xil", "5 xil"],
+        correctIndex: 0,
+        explanation:
+          "Reactda odatda 4 xil usul keng qo'llaniladi: Inline CSS, CSS fayli, CSS Modules va CSS-in-JS (Styled Components).",
+      },
+      {
+        id: 8,
+        question: "Reactdagi style berish usullarini ayting.",
+        options: [
+          "Inline CSS, CSS, CSS Modules, Styled Components",
+          "Bootstrap, Tailwind, Sass, Less",
+          "HTML, CSS, JS",
+          "Flexbox, Grid, Float, Position",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Reactda style berishning asosiy usullari: Inline CSS, oddiy CSS, CSS Modules va Styled Components.",
       },
       {
         id: 9,
-        question:
-          "Reactda inline css yozish qaysi qatorda to'g'ri ko'rsatilgan?",
+        question: "Inline CSS nima?",
         options: [
-          '<div style="color: red; font-size: 12px">',
-          "<div style={{ color: 'red', fontSize: '12px' }}>",
-          "<div style={color: 'red'}>",
-          '<div css="color: red">',
+          "JSX ichida style atributi orqali yozilgan CSS",
+          "Tashqi CSS fayli",
+          "CSS Modules",
+          "SASS fayli",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "JSX da inline style berishda ob'ektdan foydalaniladi va CSS xossalari camelCase formatida yoziladi.",
+          "Inline CSS React komponentining style atributi orqali JavaScript obyekti ko'rinishida yoziladi.",
       },
       {
         id: 10,
-        question:
-          "CSS Modules faylida bir klassni ikkinchisidan meros qilib olish uchun qaysi kalit so'z ishlatiladi?",
-        options: ["extends", "composes", "inherit", "include"],
+        question: "Reactda inline CSS qanday yoziladi?",
+        options: [
+          '<div style="color:red">',
+          "<div style={{ color: 'red' }}></div>",
+          "<div css='color:red'>",
+          "<div style={color:red}>",
+        ],
         correctIndex: 1,
         explanation:
-          "CSS Modules-da boshqa klass stillarini olish uchun `composes` kalit so'zi ishlatiladi. Masalan: `composes: className from './another.css';`.",
+          "Inline CSS Reactda style atributiga obyekt berish orqali yoziladi.",
+      },
+      {
+        id: 11,
+        question:
+          "Reactda inline CSS yozishda CSS xossalari qanday formatda yoziladi?",
+        options: ["camelCase", "kebab-case", "snake_case", "UPPER_CASE"],
+        correctIndex: 0,
+        explanation:
+          "Reactda CSS xossalari camelCase formatida yoziladi. Masalan: backgroundColor, fontSize.",
+      },
+      {
+        id: 12,
+        question:
+          "Reactda bitta elementga bir nechta inline style qanday beriladi?",
+        options: [
+          "Bitta JavaScript obyekti ichida yoziladi",
+          "Har bir style alohida style atributida yoziladi",
+          "Faqat className orqali",
+          "Buni qilish mumkin emas",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Bir nechta stillar style={{ color: 'red', fontSize: '20px' }} ko'rinishida bitta obyekt ichida yoziladi.",
+      },
+      {
+        id: 13,
+        question: "CSS Modules nima uchun ishlatiladi?",
+        options: [
+          "Klass nomlarini unikal qilish uchun",
+          "Animatsiya yaratish uchun",
+          "Bootstrap o'rniga",
+          "JavaScript yozish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "CSS Modules klass nomlarini avtomatik unikal qiladi va stillarning boshqa komponentlarga ta'sir qilishining oldini oladi.",
+      },
+      {
+        id: 14,
+        question:
+          "CSS Modules faylida qanday qilib klassni global qilish mumkin?",
+        options: [
+          ":global(.my-class) { ... }",
+          ".global {}",
+          "@global {}",
+          "global {}",
+        ],
+        correctIndex: 0,
+        explanation:
+          "CSS Modules ichida :global() yordamida klass global holatda yoziladi.",
       },
     ],
   },
@@ -432,130 +838,277 @@ export const topics = [
     questions: [
       {
         id: 1,
+        question: "Static va Dynamic nima?",
+        options: [
+          "Static - o'zgarmaydigan, Dynamic - o'zgaradigan",
+          "Static - tez ishlaydi, Dynamic - sekin ishlaydi",
+          "Static - JavaScript, Dynamic - CSS",
+          "Ikkalasi bir xil tushuncha",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Static — o'zgarmaydigan ma'lumot yoki kontent. Dynamic esa foydalanuvchi, API yoki dastur holatiga qarab o'zgaradigan ma'lumotdir.",
+      },
+      {
+        id: 2,
+        question: "Static Data nima?",
+        options: [
+          "Doimiy va o'zgarmaydigan ma'lumot",
+          "API dan keladigan ma'lumot",
+          "Har safar o'zgaradigan ma'lumot",
+          "State ichidagi ma'lumot",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Static Data — dastur ishlashi davomida o'zgarmaydigan ma'lumot hisoblanadi.",
+      },
+      {
+        id: 3,
+        question: "Dynamic Data nima?",
+        options: [
+          "Dastur ishlashi davomida o'zgaradigan ma'lumot",
+          "Faqat string ma'lumot",
+          "Faqat number ma'lumot",
+          "Doimiy ma'lumot",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Dynamic Data foydalanuvchi harakati, API yoki state o'zgarishiga qarab yangilanadigan ma'lumotdir.",
+      },
+      {
+        id: 4,
+        question: "map() nima?",
+        options: [
+          "Array metodi",
+          "String metodi",
+          "Object metodi",
+          "DOM metodi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "map() JavaScript Array metodidir va massiv elementlarini qayta ishlab yangi massiv hosil qiladi.",
+      },
+      {
+        id: 5,
+        question: "map() nima uchun ishlatiladi?",
+        options: [
+          "Massiv elementlarini aylanib chiqib yangi massiv yaratish uchun",
+          "Massivni o'chirish uchun",
+          "Massivni saralash uchun",
+          "Massivni qisqartirish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "map() har bir element ustida amal bajarib, natijada yangi massiv qaytaradi.",
+      },
+      {
+        id: 6,
+        question:
+          "map() qaysi data type (ma'lumot turi) ning metodi hisoblanadi?",
+        options: ["Array", "Object", "String", "Number"],
+        correctIndex: 0,
+        explanation:
+          "map() faqat Array prototipiga tegishli metod hisoblanadi.",
+      },
+      {
+        id: 7,
+        question: "map() metodmi yoki functionmi?",
+        options: ["Metod", "Function", "Class", "Hook"],
+        correctIndex: 0,
+        explanation:
+          "map() Array obyektining metodi hisoblanadi. Ammo uning ichiga callback function uzatiladi.",
+      },
+      {
+        id: 8,
+        question: "map() qavslari ichida qanday function yoziladi?",
+        options: [
+          "Callback function",
+          "Constructor function",
+          "Async function",
+          "Generator function",
+        ],
+        correctIndex: 0,
+        explanation:
+          "map() callback function qabul qiladi. U har bir element uchun alohida ishlaydi.",
+      },
+      {
+        id: 9,
+        question: "map() callback functioni nima uchun kerak?",
+        options: [
+          "Har bir element ustida amal bajarish uchun",
+          "Massivni o'chirish uchun",
+          "Element qo'shish uchun",
+          "Massivni sort qilish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Callback function massivdagi har bir element uchun chaqiriladi va yangi qiymat qaytaradi.",
+      },
+      {
+        id: 10,
+        question: "map() callback functioni nechta parametr qabul qiladi?",
+        options: ["3 ta", "1 ta", "2 ta", "4 ta"],
+        correctIndex: 0,
+        explanation:
+          "Callback function uchta parametr qabul qilishi mumkin: element, index va array.",
+      },
+      {
+        id: 11,
+        question: "map() callback functionining parametrlari qanday nomlanadi?",
+        options: [
+          "element, index, array",
+          "value, key",
+          "id, name",
+          "first, second",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Eng ko'p ishlatiladigan parametrlar: element (yoki item), index va array.",
+      },
+      {
+        id: 12,
+        question:
+          "map() yangi massiv qaytaradimi yoki eski massivni o'zgartiradimi?",
+        options: [
+          "Yangi massiv qaytaradi",
+          "Eski massivni o'zgartiradi",
+          "Massivni o'chiradi",
+          "undefined qaytaradi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "map() original massivni o'zgartirmaydi, yangi massiv qaytaradi.",
+      },
+      {
+        id: 13,
+        question: "map() va forEach() o'rtasidagi asosiy farq nima?",
+        options: [
+          "map() yangi massiv qaytaradi, forEach() esa qaytarmaydi",
+          "Ikkalasi ham bir xil",
+          "forEach() tezroq",
+          "map() faqat Reactda ishlaydi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "map() yangi massiv hosil qiladi, forEach() esa faqat aylanib chiqadi va undefined qaytaradi.",
+      },
+      {
+        id: 14,
         question:
           "Reactda ma'lumotlar massivini ro'yxat ko'rinishida render qilish uchun qaysi metod ishlatiladi?",
         options: ["forEach()", "map()", "filter()", "reduce()"],
         correctIndex: 1,
         explanation:
-          "`map()` metodi massiv elementlarini aylanib chiqib, har bir element uchun yangi JSX qaytaradi va bu orqali ro'yxatlar dinamik hosil qilinadi.",
+          "Reactda ro'yxatlarni render qilish uchun odatda map() metodidan foydalaniladi.",
       },
       {
-        id: 2,
+        id: 15,
         question:
           "Ro'yxat elementlarini render qilganda har bir elementga berilishi shart bo'lgan maxsus atribut nima?",
         options: ["id", "key", "index", "className"],
         correctIndex: 1,
-        explanation:
-          "Ro'yxatdagi har bir JSX elementiga majburiy ravishda unikal `key` atributi berilishi shart.",
+        explanation: "Har bir elementga unikal key atributi berilishi kerak.",
       },
       {
-        id: 3,
-        question: "Reactda `key` atributining asosiy vazifasi nima?",
+        id: 16,
+        question: "Reactda key atributining asosiy vazifasi nima?",
         options: [
-          "Elementlarni chiroyli stillash",
-          "Virtual DOMga qaysi elementlar o'zgargani, qo'shilgani yoki o'chirilganini tezda aniqlashga yordam berish",
-          "JavaScript xotirasini tejash",
-          "Elementlarni saralash",
-        ],
-        correctIndex: 1,
-        explanation:
-          "`key` Reactga qaysi elementlar o'zgarganini tezroq solishtirish imkonini beradi. Bu ro'yxatlar o'zgarganda faqat kerakli elementni qayta chizish orqali tezlikni ta'minlaydi.",
-      },
-      {
-        id: 4,
-        question: "`key` atributi qiymati qanday bo'lishi kerak?",
-        options: [
-          "Barcha elementlarda bir xil bo'lishi kerak",
-          "Ro'yxat doirasida mutlaqo unikal (takrorlanmas) va o'zgarmas bo'lishi kerak",
-          "Faqat ketma-ket keladigan sonlar bo'lishi shart",
-          "Matn ko'rinishida bo'lishi taqiqlanadi",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Key qiymati o'sha ro'yxat ichida har bir element uchun unikal bo'lishi kerak. Odatda ma'lumotlar bazasidagi `id` ishlatiladi.",
-      },
-      {
-        id: 5,
-        question:
-          "`key` sifatida massiv indeksidan (index) foydalanish tavsiya etiladimi?",
-        options: [
-          "Ha, bu eng to'g'ri yo'l",
-          "Yo'q, faqat ro'yxat statik bo'lsa (elementlar qo'shilmasa, o'chirilmasa yoki saralanmasa) ishlatish mumkin. Aks holda bu xatoliklarga olib keladi",
-          "Taqiqlangan, mutlaqo xato beradi",
-          "Faqat string indekslar tavsiya etiladi",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Agar ro'yxat tartibi o'zgarsa, o'chirilsa yoki qo'shilsa, indekslar ham o'zgarib ketadi. Bu Reactning Virtual DOM solishtirishini chalkashtirib yuboradi.",
-      },
-      {
-        id: 6,
-        question:
-          "Qaysi xolatda React `key` berilmaganda ogohlantirish (warning) beradi?",
-        options: [
-          "Har qanday div ishlatilganda",
-          "Massivni map() yordamida aylanib JSX qaytarilganda",
-          "Faqat formalar bilan ishlaganda",
-          "Faqat useEffect ichida",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Brauzer konsolida 'Each child in a list should have a unique key prop' ogohlantirishi `map` ichidagi JSX elementlariga `key` berilmaganda chiqadi.",
-      },
-      {
-        id: 7,
-        question:
-          "Bola komponentga berilgan `key` propini bola komponent ichida o'qib olish mumkinmi?",
-        options: [
-          "Ha, props.key orqali",
-          "Yo'q, key Reactning ichki ehtiyojlari uchun ajratilgan va u bola komponentga props sifatida o'tib bormaydi",
-          "Faqat klass komponentlarda o'qish mumkin",
-          "Faqat useState ichida mumkin",
-        ],
-        correctIndex: 1,
-        explanation:
-          "`key` atributi maxsus kalit so'z bo'lib, React uni o'zining Virtual DOM solishtiruvida ishlatadi va bola komponent propslar ro'yxatiga qo'shmaydi.",
-      },
-      {
-        id: 8,
-        question:
-          "Agar ma'lumotlarda unikal id bo'lmasa, key uchun nima ishlatish mumkin?",
-        options: [
-          "Math.random() ni to'g'ridan-to'g'ri render ichida chaqirish",
-          "Tashqarida yaratilgan unikal id generatorlari (masalan, uuid yoki nanoid)",
-          "Faqat bo'sh satr",
-          "Barcha elementlarga bir xil nom berish",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Render vaqtida `Math.random()` ishlatish xato. Uuid kabi kutubxonalar bilan unikal id generatsiya qilib olish to'g'ri yo'l hisoblanadi.",
-      },
-      {
-        id: 9,
-        question:
-          "`key` ning unikal bo'lishi butun veb-sayt miqyosida shartmi?",
-        options: [
-          "Ha, butun loyihada bitta ham takrorlanmasligi kerak",
-          "Yo'q, faqat joriy ro'yxat (massiv) doirasida unikal bo'lsa kifoya. Boshqa sahifadagi boshqa ro'yxatlarda bir xil keylar bo'lishi mumkin",
-          "Faqat bir sahifada unikal bo'lishi kerak",
-          "Faqat root komponentda shart",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Key atributi faqat o'zi joylashgan o'sha ro'yxat (massiv) ichida bir-biridan farq qilishi kerak. Global miqyosda bir xil bo'lishining zarari yo'q.",
-      },
-      {
-        id: 10,
-        question: "`key` ning to'g'ri ishlatilishi qaysi qatorda ko'rsatilgan?",
-        options: [
-          "{items.map((item) => <li key={item.id}>{item.name}</li>)}",
-          "{items.map((item) => <li>{item.name}</li>)}",
-          "{items.map((item) => <li id={item.id}>{item.name}</li>)}",
-          "{items.map((item) => <li class={item.id}>{item.name}</li>)}",
+          "Virtual DOMga elementlarni aniqlashga yordam beradi",
+          "CSS berish uchun",
+          "Elementni yashirish uchun",
+          "Import qilish uchun",
         ],
         correctIndex: 0,
         explanation:
-          "Ro'yxat elementining eng tashqi JSX tegi (`<li>`) tarkibida unikal `key` atributi yozilishi to'g'ri amaliyotdir.",
+          "key Reactga qaysi element o'zgarganini tez aniqlashga yordam beradi.",
+      },
+      {
+        id: 17,
+        question: "key atributi qiymati qanday bo'lishi kerak?",
+        options: [
+          "Unikal va o'zgarmas",
+          "Bir xil",
+          "Faqat son",
+          "Faqat string",
+        ],
+        correctIndex: 0,
+        explanation: "Key qiymati o'sha ro'yxat ichida takrorlanmasligi kerak.",
+      },
+      {
+        id: 18,
+        question:
+          "key sifatida massiv indeksidan (index) foydalanish tavsiya etiladimi?",
+        options: [
+          "Faqat statik ro'yxatlarda",
+          "Har doim",
+          "Hech qachon",
+          "Faqat number bo'lsa",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Index faqat ro'yxat o'zgarmaydigan holatlarda ishlatilishi tavsiya etiladi.",
+      },
+      {
+        id: 19,
+        question:
+          "Qaysi holatda React key berilmaganda ogohlantirish (warning) beradi?",
+        options: [
+          "map() orqali JSX qaytarilganda",
+          "div ishlatilganda",
+          "useState ishlatilganda",
+          "Form yozilganda",
+        ],
+        correctIndex: 0,
+        explanation: "React map() ichida key bo'lmasa warning chiqaradi.",
+      },
+      {
+        id: 20,
+        question:
+          "Bola komponentga berilgan key propini bola komponent ichida o'qib olish mumkinmi?",
+        options: ["Yo'q", "Ha", "Faqat Class Componentda", "Faqat useEffectda"],
+        correctIndex: 0,
+        explanation:
+          "key Reactning ichki atributi bo'lib, props orqali uzatilmaydi.",
+      },
+      {
+        id: 21,
+        question:
+          "Agar ma'lumotlarda unikal id bo'lmasa, key uchun nima ishlatish mumkin?",
+        options: [
+          "uuid yoki nanoid",
+          "Math.random()",
+          "Bir xil qiymat",
+          "Bo'sh string",
+        ],
+        correctIndex: 0,
+        explanation:
+          "uuid yoki nanoid kabi kutubxonalar yordamida unikal id yaratish tavsiya etiladi.",
+      },
+      {
+        id: 22,
+        question: "key ning unikal bo'lishi butun veb-sayt miqyosida shartmi?",
+        options: [
+          "Yo'q, faqat o'sha ro'yxat ichida",
+          "Ha",
+          "Faqat sahifa ichida",
+          "Faqat component ichida",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Key faqat o'zi joylashgan ro'yxat ichida unikal bo'lishi kifoya.",
+      },
+      {
+        id: 23,
+        question: "key ning to'g'ri ishlatilishi qaysi qatorda ko'rsatilgan?",
+        options: [
+          "{items.map(item => <li key={item.id}>{item.name}</li>)}",
+          "{items.map(item => <li>{item.name}</li>)}",
+          "{items.map(item => <li id={item.id}>{item.name}</li>)}",
+          "{items.map(item => <li className={item.id}>{item.name}</li>)}",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Ro'yxatdagi eng tashqi JSX elementiga unikal key berilishi kerak.",
       },
     ],
   },
@@ -574,137 +1127,128 @@ export const topics = [
         id: 1,
         question: "Props nima?",
         options: [
-          "Komponentning ichki o'zgaruvchan holati",
-          "Ota komponentdan bola komponentga uzatiladigan o'zgarmas ma'lumotlar",
-          "CSS klasslari ro'yxati",
-          "HTML teglari to'plami",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Props (Properties) — ota komponentdan bola komponentga uzatiladigan, bola komponent uchun faqat o'qishga mo'ljallangan parametrlardir.",
-      },
-      {
-        id: 2,
-        question:
-          "Props qiymatini bola komponent ichida o'zgartirsa bo'ladimi?",
-        options: [
-          "Ha, o'zgartirish mumkin",
-          "Yo'q, props 'read-only' (faqat o'qish uchun) hisoblanadi va uni bola komponentda o'zgartirib bo'lmaydi",
-          "Faqat klass komponentlarda o'zgartirsa bo'ladi",
-          "Faqat son ko'rinishida bo'lsa mumkin",
-        ],
-        correctIndex: 1,
-        explanation:
-          "React qoidalariga ko'ra props o'zgarmasdir (immutable). Agar bolada props o'zgarishi kerak bo'lsa, ota komponentdan callback funksiya uzatiladi.",
-      },
-      {
-        id: 3,
-        question:
-          "Functional komponentda propsni destruptizatsiya (destructure) qilish qanday yoziladi?",
-        options: [
-          "const { props } = MyComponent",
-          "function MyComponent({ name, age })",
-          "function MyComponent(props.name)",
-          "destructure(props)",
-        ],
-        correctIndex: 1,
-        explanation:
-          "Komponent parametrlarida gulli qavslar `{}` yordamida props elementlarini destruptizatsiya qilib olish kodni toza qiladi.",
-      },
-      {
-        id: 4,
-        question: "`props.children` nima?",
-        options: [
-          "Faqat bola komponentlar ro'yxati",
-          "Komponentning ochiluvchi va yopiluvchi teglari orasiga yozilgan har qanday kontent",
-          "Bola komponentlarning soni",
-          "Props ro'yxatini o'chiradigan metod",
-        ],
-        correctIndex: 1,
-        explanation:
-          "`props.children` yordamida komponentni ochish-yopish teglari `<MyCard>kontent</MyCard>` ko'rinishida yozganimizda ichidagi 'kontent'ni qabul qilib olamiz.",
-      },
-      {
-        id: 5,
-        question:
-          "Reactda default props qiymati qanday berilishi mumkin (funktsional komponentda)?",
-        options: [
-          "Default parameter orqali: `function MyComponent({ name = 'Mehmon' })`",
-          "useState yordamida",
-          "CSS orqali",
-          "Unga default berib bo'lmaydi",
+          "Componentlar orasida ma'lumot uzatish usuli",
+          "State saqlash usuli",
+          "CSS yozish qoidasi",
+          "Hook turi",
         ],
         correctIndex: 0,
         explanation:
-          "Funktsional komponentlarda default qiymat berishning eng zamonaviy va oson yo'li JS dagi default parametrlardan foydalanishdir.",
+          "Props (Properties) — React componentlariga ota componentdan bola componentga ma'lumot uzatish uchun ishlatiladi. Props faqat o'qish (read-only) xususiyatiga ega.",
+      },
+      {
+        id: 2,
+        question: "Children props nima?",
+        options: [
+          "Component ochilish va yopilish teglari orasidagi kontent",
+          "Faqat matn uzatish usuli",
+          "State turi",
+          "Hook",
+        ],
+        correctIndex: 0,
+        explanation:
+          "children — Reactning maxsus propsi bo'lib, componentning ochilish va yopilish teglari orasidagi barcha elementlarni o'z ichiga oladi.",
+      },
+      {
+        id: 3,
+        question: "Propsda destructuring ishlatishning afzalligi nima?",
+        options: [
+          "Kod qisqaroq va o'qilishi oson bo'ladi",
+          "Component tezroq ishlaydi",
+          "State avtomatik yaratiladi",
+          "Props o'zgaruvchan bo'ladi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Destructuring yordamida props.name o'rniga bevosita name deb foydalanish mumkin. Bu kodni toza va tushunarli qiladi.",
+      },
+      {
+        id: 4,
+        question: "Function props nima?",
+        options: [
+          "Props orqali function uzatish",
+          "Function ichida props yaratish",
+          "State o'rniga ishlatiladigan Hook",
+          "CSS funksiyasi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Function props orqali ota component bola componentga function uzatadi. Bola component esa kerak bo'lganda ushbu functionni chaqiradi.",
+      },
+      {
+        id: 5,
+        question: "Propslarni boshqa componentga qanday uzatish mumkin?",
+        options: [
+          "JSX atributlari orqali",
+          "State orqali",
+          "CSS orqali",
+          "useEffect orqali",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Props JSX atributlari ko'rinishida uzatiladi. Masalan: <User name='Ali' age={20} />.",
       },
       {
         id: 6,
-        question:
-          "Props yordamida funksiyalarni bola komponentga uzatish mumkinmi?",
+        question: "Reactda rasm (img) qanday ishlatiladi?",
         options: [
-          "Yo'q, faqat sonlar va matnlarni uzatish mumkin",
-          "Ha, JavaScript funksiyalarini ham props sifatida uzatish mumkin",
-          "Faqat maxsus kutubxonalar bilan mumkin",
-          "Faqat klass komponentlarda mumkin",
+          "src atributiga import qilingan yoki URL beriladi",
+          "Faqat CSS orqali",
+          "Faqat public papkadan",
+          "Faqat base64 bilan",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "Reactda funksiyalar ham props orqali bolaga uzatilishi mumkin. Bu boladan otaga ma'lumot yoki hodisalarni qaytarish uchun keng qo'llaniladi.",
+          "Reactda rasmni import qilib yoki URL orqali img tegining src atributiga berish mumkin.",
       },
       {
         id: 7,
         question:
-          "Ota komponent render bo'lganda uning ostidagi bola komponentlar render bo'ladimi?",
+          "Reactda ikonkalardan foydalanishning eng mashhur usuli qaysi?",
         options: [
-          "Yo'q, faqat o'zgarganda",
-          "Ha, ota render bo'lganda uning barcha bola komponentlari ham re-render bo'ladi (agar memo ishlatilmagan bo'lsa)",
-          "Faqat props bo'lmasa",
-          "Hech qachon",
+          "react-icons kutubxonasi",
+          "Bootstrap JS",
+          "Node.js",
+          "Express",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "Reactda standart holatda ota komponent render bo'lsa, barcha bola komponentlar ham qayta render qilinadi.",
+          "React loyihalarida ikonkalardan foydalanish uchun eng ko'p ishlatiladigan kutubxonalardan biri react-icons hisoblanadi.",
       },
       {
         id: 8,
-        question: "Props Drilling nima?",
-        options: [
-          "Propsni o'chirib yuborish jarayoni",
-          "Ma'lumotni ota komponentdan juda chuqur joylashgan bola komponentga yetkazish uchun o'rtadagi keraksiz komponentlar orqali propsni ketma-ket o'tkazish",
-          "Dizayn stillari oqimi",
-          "API dan ma'lumot olish",
-        ],
-        correctIndex: 1,
+        question:
+          "Reactda JavaScript o'zgaruvchilari JSX ichida qanday yoziladi?",
+        options: ["{} ichida", "() ichida", "[] ichida", "<> ichida"],
+        correctIndex: 0,
         explanation:
-          "Props Drilling — bu state yoki ma'lumotni o'rtadagi komponentlarga kerak bo'lmasa ham, chuqur joylashgan bola komponentga yetkazish uchun ketma-ket props qilib uzatib chiqish jarayonidir.",
+          "JSX ichida JavaScript ifodalari va o'zgaruvchilar {} (curly braces) ichida yoziladi.",
       },
       {
         id: 9,
-        question: "PropTypes nima?",
+        question: "Reactda dinamik qiymat nima?",
         options: [
-          "Props stillari ro'yxati",
-          "Komponentga keladigan propslarning tiplarini (string, number, array va b.) tekshirish uchun ishlatiladigan yordamchi kutubxona",
-          "useState hookining bir turi",
-          "React router metodi",
+          "O'zgarishi mumkin bo'lgan qiymat",
+          "Doimiy qiymat",
+          "Faqat string",
+          "Faqat number",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "PropTypes yordamida runtime da kelayotgan propslar turi to'g'riligini tekshirish mumkin.",
+          "Dinamik qiymat foydalanuvchi harakati, state yoki propsga qarab o'zgaradigan qiymat hisoblanadi.",
       },
       {
         id: 10,
-        question:
-          "Props orqali olingan massivni bola komponentda o'zgartirish to'g'rimi (masalan, `props.list.push(5)`)?",
+        question: "Statik qiymat nima?",
         options: [
-          "Ha, bu oddiy massiv",
-          "Yo'q, bu props immutabillik qoidasini buzadi va xatoliklarga olib keladi. Nusxa olib keyin o'zgartirish kerak",
-          "Faqat string bo'lsa mumkin",
-          "Faqat loading bo'lsa to'g'ri",
+          "O'zgarmaydigan doimiy qiymat",
+          "Har safar o'zgaradigan qiymat",
+          "Faqat number",
+          "API dan keladigan qiymat",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "Props orqali kelgan ma'lumotlarni to'g'ridan-to'g'ri mutatsiya qilish taqiqlanadi. O'zgartirish kerak bo'lsa, massivdan nusxa olish kerak (`[...props.list]`).",
+          "Statik qiymat dastur ishlashi davomida o'zgarmaydigan qiymat hisoblanadi. Masalan: <h1>React Course</h1>.",
       },
     ],
   },
