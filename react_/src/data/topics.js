@@ -2465,121 +2465,539 @@ export const topics = [
         options: ["axios", "fetch", "ajax", "request"],
         correctIndex: 1,
         explanation:
-          "`fetch()` funksiyasi brauzerda tayyor o'rnatilgan va tarmoq orqali so'rov yuboradigan asinxron Promise qaytaruvchi API dir.",
+          "`fetch()` brauzer ichida o'rnatilgan standart API bo'lib, HTTP so'rovlarini yuborish uchun ishlatiladi.",
       },
       {
         id: 2,
-        question:
-          "Fetch funksiyasidan kelgan response o'qiladigan JSON formatiga qanday o'tkaziladi?",
+        question: "Fetch funksiyasi nima?",
         options: [
-          "JSON.parse(response)",
-          "await response.json()",
-          "response.text()",
-          "Avtomatik ravishda JSON formatida keladi",
+          "Ma'lumotlarni saqlash funksiyasi",
+          "HTTP so'rovlarini yuborish funksiyasi",
+          "DOM bilan ishlash funksiyasi",
+          "Matnni formatlash funksiyasi",
         ],
         correctIndex: 1,
         explanation:
-          "Fetch javobi HTTP response ko'rinishida keladi. Uni o'qish uchun `response.json()` metodini chaqirish va uni kutish (await) lozim.",
+          "Fetch — serverga HTTP so'rov yuborish va javob olish uchun ishlatiladigan Web API.",
       },
       {
         id: 3,
-        question: "CRUD nima degani?",
+        question: "Fetch funksiyasida qanday HTTP metodlar mavjud?",
         options: [
-          "Create, Read, Update, Delete (Ma'lumotlar bilan ishlashdagi 4 ta asosiy operatsiya)",
-          "Css kodlarini siqish standarti",
-          "React router turi",
-          "Dasturning xavfsizlik protokoli",
+          "GET, POST, PUT, PATCH, DELETE",
+          "SEND, RECEIVE",
+          "IMPORT, EXPORT",
+          "OPEN, CLOSE",
         ],
         correctIndex: 0,
         explanation:
-          "CRUD — Create (Yaratish), Read (O'qish), Update (Yangilash), Delete (O'chirish) so'zlarining qisqartmasi bo'lib, har qanday ma'lumotlar bazasi yoki API bilan ishlash asosi hisoblanadi.",
+          "Fetch barcha asosiy HTTP metodlarini qo'llab-quvvatlaydi.",
       },
       {
         id: 4,
-        question:
-          "Yangi ma'lumot yaratish (Create) uchun qaysi HTTP metodi ishlatiladi?",
-        options: ["GET", "POST", "PUT", "DELETE"],
+        question: "Fetch ichidagi .then() nima uchun ishlatiladi?",
+        options: [
+          "Xatolarni ushlash uchun",
+          "So'rov muvaffaqiyatli tugagandan keyin natijani qayta ishlash uchun",
+          "Serverni o'chirish uchun",
+          "Body yaratish uchun",
+        ],
         correctIndex: 1,
         explanation:
-          "Yangi ma'lumot qo'shish yoki serverga yuborish uchun odatda `POST` metodidan foydalaniladi.",
+          ".then() Promise muvaffaqiyatli bajarilgandan keyingi natijani qayta ishlaydi.",
       },
       {
         id: 5,
-        question:
-          "Ma'lumotni to'liq yangilash (Update) uchun qaysi HTTP metodi ishlatiladi?",
-        options: ["GET", "POST", "PUT", "DELETE"],
+        question: "Fetch ichidagi .catch() nima uchun ishlatiladi?",
+        options: [
+          "JSON o'qish uchun",
+          "HTTP metod tanlash uchun",
+          "Xatolarni ushlash uchun",
+          "Body yozish uchun",
+        ],
         correctIndex: 2,
-        explanation:
-          "Mavjud ma'lumotlarni to'liq yangilash uchun `PUT` metodi, qisman o'zgartirish uchun esa `PATCH` metodi ishlatiladi.",
+        explanation: ".catch() Promise bajarilishidagi xatolarni ushlaydi.",
       },
       {
         id: 6,
-        question:
-          "Fetch yordamida POST so'rovini yuborishda so'rov tanasi (body) qaysi ko'rinishda beriladi?",
+        question: "Fetch funksiyasi qayerdan import qilinadi?",
         options: [
-          "Bo'sh satr",
-          "JSON.stringify(data) ko'rinishidagi string formatda va headers qismida Content-Type: application/json ko'rsatilgan holda",
-          "JavaScript obyekti ko'rinishida to'g'ridan-to'g'ri",
-          "Faqat URL ichida parametrlarda",
+          "react dan",
+          "axios dan",
+          "Import qilinmaydi, brauzer ichida mavjud",
+          "node_modules dan",
         ],
-        correctIndex: 1,
+        correctIndex: 2,
         explanation:
-          "Serverga ma'lumot yuborishda obyekt JSON satriga o'giriladi (`JSON.stringify`) va server u bilan ishlashi uchun mos sarlavha (Headers) qo'shiladi.",
+          "Fetch brauzerning o'zida mavjud, uni import qilish shart emas.",
       },
       {
         id: 7,
-        question:
-          "Fetch funksiyasida xatoliklarni tekshirishda response.ok nimani anglatadi?",
+        question: "Fetch funksiyasi qanday ishlaydi?",
         options: [
-          "Serverdan muvaffaqiyatli (200-299) status kodi qaytganligini ko'rsatuvchi boolean qiymat",
-          "Internet tezligini",
-          "State yangilanganini",
-          "Faqat fayllar yuklanganini",
+          "Promise qaytarib serverga so'rov yuboradi",
+          "Faqat ma'lumot saqlaydi",
+          "CSS yuklaydi",
+          "React komponent yaratadi",
         ],
         correctIndex: 0,
         explanation:
-          "Fetch 404 yoki 500 xatolarida Promise ni reject qilmaydi, shuning uchun so'rov muvaffaqiyatli o'tganini tekshirish uchun `if (!response.ok)` yozish shart.",
+          "Fetch serverga HTTP so'rov yuboradi va Promise qaytaradi.",
       },
       {
         id: 8,
-        question:
-          "So'rov yuborilayotgan vaqtda pending bo'lib turganda asinxron so'rovni bekor qilish uchun qaysi brauzer API si ishlatiladi?",
-        options: [
-          "AbortController",
-          "CancelToken",
-          "StopFetch",
-          "Promise.cancel()",
-        ],
+        question: "Fetch funksiyasi Promise qaytaradimi?",
+        options: ["Ha", "Yo'q", "Faqat Reactda", "Faqat Node.js da"],
         correctIndex: 0,
-        explanation:
-          "`AbortController` yordamida so'rovlarni boshqarish va agar komponent unmount bo'lsa, tugallanmagan so'rovni bekor qilish (abort) mumkin.",
+        explanation: "Fetch har doim Promise qaytaradi.",
       },
       {
         id: 9,
-        question: "GET so'rovi nima uchun xizmat qiladi?",
+        question: "Fetch yordamida GET so'rovi qanday yuboriladi?",
         options: [
-          "Serverdan ma'lumotlarni olish (o'qish) uchun",
-          "Ma'lumotlarni o'chirish uchun",
-          "Yangi ma'lumot yaratish uchun",
-          "Stillarni yuklash uchun",
+          "fetch(url)",
+          "fetch.post(url)",
+          "fetch.get(url)",
+          "fetch.send(url)",
         ],
         correctIndex: 0,
-        explanation:
-          "GET metodi serverdan kerakli ma'lumotlarni yuklab olish uchun ishlatiladigan standart HTTP metodidir.",
+        explanation: "GET fetch(url) yoki method: 'GET' orqali yuboriladi.",
       },
       {
         id: 10,
         question:
-          "DELETE metodi orqali o'chirish so'rovi yuborilganda odatda URL qanday ko'rinishda bo'ladi?",
+          "Fetch funksiyasidan kelgan response o'qiladigan JSON formatiga qanday o'tkaziladi?",
         options: [
-          "/api/delete",
-          "/api/users/:id — o'chirilishi kerak bo'lgan elementning unikal ID si URL oxiriga qo'shiladi",
-          "/api/users?all=true",
-          "/api/users",
+          "response.json()",
+          "response.text()",
+          "JSON.stringify()",
+          "JSON.parse()",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "Elementlarni o'chirishda aynan qaysi element o'chirilishi kerakligini bildirish uchun uning unikal ID si URL pathiga qo'shib yuboriladi.",
+          "response.json() javobni JavaScript obyektiga aylantiradi.",
+      },
+      {
+        id: 11,
+        question: "response.json() nima vazifani bajaradi?",
+        options: [
+          "JSON javobni JavaScript obyektiga aylantiradi",
+          "Serverga so'rov yuboradi",
+          "JSON yaratadi",
+          "Header qo'shadi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "response.json() JSON javobni o'qib JavaScript obyektiga aylantiradi.",
+      },
+      {
+        id: 12,
+        question: "CRUD nima?",
+        options: [
+          "Ma'lumotlar bilan ishlashning 4 asosiy operatsiyasi",
+          "CSS kutubxonasi",
+          "React Hook",
+          "JavaScript metodi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "CRUD — Create, Read, Update va Delete amallarining qisqartmasi.",
+      },
+      {
+        id: 13,
+        question: "CRUD so'zidagi harflar nimani anglatadi?",
+        options: [
+          "Create, Read, Update, Delete",
+          "Copy, Remove, Upload, Download",
+          "Call, Render, Update, Deploy",
+          "Code, Run, Use, Debug",
+        ],
+        correctIndex: 0,
+        explanation:
+          "CRUD — Create, Read, Update, Delete degan ma'noni anglatadi.",
+      },
+      {
+        id: 14,
+        question: "CRUD operatsiyalari qaysilar?",
+        options: [
+          "Create, Read, Update, Delete",
+          "GET, HTML, CSS, JS",
+          "Import, Export",
+          "Open, Save",
+        ],
+        correctIndex: 0,
+        explanation:
+          "CRUD ma'lumotlar bilan ishlashning 4 asosiy amalidan iborat.",
+      },
+      {
+        id: 15,
+        question: "GET metodi nima uchun ishlatiladi?",
+        options: [
+          "Ma'lumot olish uchun",
+          "Ma'lumot o'chirish uchun",
+          "Ma'lumot qo'shish uchun",
+          "Ma'lumot yangilash uchun",
+        ],
+        correctIndex: 0,
+        explanation: "GET serverdan ma'lumot olish uchun ishlatiladi.",
+      },
+      {
+        id: 16,
+        question: "POST metodi nima uchun ishlatiladi?",
+        options: [
+          "Yangi ma'lumot qo'shish uchun",
+          "Ma'lumot olish uchun",
+          "Ma'lumot o'chirish uchun",
+          "Ma'lumot qidirish uchun",
+        ],
+        correctIndex: 0,
+        explanation: "POST serverga yangi ma'lumot yuboradi.",
+      },
+      {
+        id: 17,
+        question: "PUT metodi nima uchun ishlatiladi?",
+        options: [
+          "Ma'lumotni to'liq yangilash uchun",
+          "Ma'lumot olish uchun",
+          "Ma'lumot o'chirish uchun",
+          "Fayl yuklash uchun",
+        ],
+        correctIndex: 0,
+        explanation: "PUT mavjud resursni to'liq yangilash uchun ishlatiladi.",
+      },
+      {
+        id: 18,
+        question: "PATCH metodi nima uchun ishlatiladi?",
+        options: [
+          "Ma'lumotning bir qismini yangilash uchun",
+          "Yangi ma'lumot qo'shish uchun",
+          "O'chirish uchun",
+          "Qidirish uchun",
+        ],
+        correctIndex: 0,
+        explanation: "PATCH resursning faqat kerakli qismini yangilaydi.",
+      },
+      {
+        id: 19,
+        question: "DELETE metodi nima uchun ishlatiladi?",
+        options: [
+          "Ma'lumotni o'chirish uchun",
+          "Ma'lumot olish uchun",
+          "Qo'shish uchun",
+          "Yangilash uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "DELETE serverdagi ma'lumotni o'chirish uchun ishlatiladi.",
+      },
+      {
+        id: 20,
+        question: "Fetch yordamida POST so'rovi qanday yuboriladi?",
+        options: [
+          "method: 'POST' bilan",
+          "method: 'GET' bilan",
+          "response.json() bilan",
+          "catch() bilan",
+        ],
+        correctIndex: 0,
+        explanation: "POST so'rov method: 'POST' va body bilan yuboriladi.",
+      },
+      {
+        id: 21,
+        question: "POST so'rovining body qismi qanday yoziladi?",
+        options: [
+          "JSON.stringify(object)",
+          "response.json()",
+          "JSON.parse()",
+          "headers",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Body odatda JSON.stringify() yordamida JSON ko'rinishiga o'tkaziladi.",
+      },
+      {
+        id: 22,
+        question: "Nima uchun JSON.stringify() ishlatiladi?",
+        options: [
+          "Obyektni JSON matniga aylantirish uchun",
+          "JSONni obyektga aylantirish uchun",
+          "Header yaratish uchun",
+          "Promise yaratish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "JSON.stringify() JavaScript obyektini JSON satriga aylantiradi.",
+      },
+      {
+        id: 23,
+        question: "headers nima?",
+        options: [
+          "HTTP so'rov haqida qo'shimcha ma'lumot",
+          "CSS xossasi",
+          "React Hook",
+          "JSON metodi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Headers server va klient o'rtasida qo'shimcha ma'lumot uzatadi.",
+      },
+      {
+        id: 24,
+        question: "Content-Type: application/json nima uchun yoziladi?",
+        options: [
+          "Body JSON formatida ekanini bildirish uchun",
+          "Serverni yoqish uchun",
+          "Cookie yaratish uchun",
+          "Status kodni o'zgartirish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Bu header yuborilayotgan ma'lumot JSON ekanini bildiradi.",
+      },
+      {
+        id: 25,
+        question: "Fetch funksiyasida response.ok nima?",
+        options: [
+          "So'rov muvaffaqiyatli bo'lganligini bildiradi",
+          "Bodyni qaytaradi",
+          "Status kodni o'zgartiradi",
+          "Headerni o'chiradi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "response.ok true bo'lsa, status kodi 200–299 oralig'ida bo'ladi.",
+      },
+      {
+        id: 26,
+        question: "response.status nima?",
+        options: [
+          "HTTP status kodini qaytaradi",
+          "JSONni qaytaradi",
+          "Headerni qaytaradi",
+          "Methodni qaytaradi",
+        ],
+        correctIndex: 0,
+        explanation: "response.status HTTP javob status kodini qaytaradi.",
+      },
+      {
+        id: 27,
+        question: "Fetch yordamida xatoliklarni qanday ushlaymiz?",
+        options: [
+          ".catch() yoki try...catch yordamida",
+          "map() yordamida",
+          "filter() yordamida",
+          "forEach() yordamida",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Fetch xatolari .catch() yoki async/await bilan try...catch orqali ushlanadi.",
+      },
+      {
+        id: 28,
+        question: "try...catch nima uchun ishlatiladi?",
+        options: [
+          "Xatolarni ushlash uchun",
+          "JSON yaratish uchun",
+          "Loop yaratish uchun",
+          "API yaratish uchun",
+        ],
+        correctIndex: 0,
+        explanation: "try...catch dastur ishlashidagi xatolarni ushlaydi.",
+      },
+      {
+        id: 29,
+        question: "if (!response.ok) tekshiruvi nima uchun kerak?",
+        options: [
+          "HTTP xatolarini aniqlash uchun",
+          "JSON yaratish uchun",
+          "Body yozish uchun",
+          "Header qo'shish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "response.ok false bo'lsa, so'rov muvaffaqiyatsiz bo'lganini bildiradi.",
+      },
+      {
+        id: 30,
+        question: "async va await nima?",
+        options: [
+          "Promise bilan qulay ishlash uchun kalit so'zlar",
+          "React Hook",
+          "CSS xossalari",
+          "HTTP metodlari",
+        ],
+        correctIndex: 0,
+        explanation:
+          "async va await Promise bilan sinxron ko'rinishda ishlash imkonini beradi.",
+      },
+      {
+        id: 31,
+        question: "Fetch bilan async/await ishlatishning afzalligi nimada?",
+        options: [
+          "Kod o'qilishi osonroq bo'ladi",
+          "API tezlashadi",
+          "JSON yo'qoladi",
+          "Server ishlamaydi",
+        ],
+        correctIndex: 0,
+        explanation: "async/await kodni soddaroq va tushunarli qiladi.",
+      },
+      {
+        id: 32,
+        question: "DELETE so'rovida URL oxiriga id nima uchun qo'shiladi?",
+        options: [
+          "Qaysi resurs o'chirilishini aniqlash uchun",
+          "Status kod uchun",
+          "JSON yaratish uchun",
+          "Header uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "DELETE aniq qaysi resurs o'chirilishini id orqali biladi.",
+      },
+      {
+        id: 33,
+        question: "Fetch so'rovini qanday bekor qilish mumkin?",
+        options: [
+          "AbortController yordamida",
+          "clearTimeout() bilan",
+          "JSON.parse() bilan",
+          "useState bilan",
+        ],
+        correctIndex: 0,
+        explanation:
+          "AbortController fetch so'rovini bekor qilish imkonini beradi.",
+      },
+      {
+        id: 34,
+        question:
+          "Reactda API dan ma'lumotlarni qaysi Hook yordamida yuklaymiz?",
+        options: ["useEffect", "useMemo", "useRef", "useId"],
+        correctIndex: 0,
+        explanation: "API chaqiruvlari odatda useEffect ichida bajariladi.",
+      },
+      {
+        id: 35,
+        question: "useEffect ichida Fetch qanday ishlatiladi?",
+        options: [
+          "Komponent yuklanganda API chaqirish uchun",
+          "State yaratish uchun",
+          "Style yozish uchun",
+          "Props uzatish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "useEffect komponent render bo'lganda Fetch orqali ma'lumot oladi.",
+      },
+      {
+        id: 36,
+        question:
+          "API dan kelgan ma'lumotlarni qaysi Hook yordamida saqlaymiz?",
+        options: ["useState", "useEffect", "useMemo", "useRef"],
+        correctIndex: 0,
+        explanation: "API javobi odatda useState ichida saqlanadi.",
+      },
+      {
+        id: 37,
+        question:
+          "Fetch orqali olingan ma'lumotlarni ekranga qanday chiqaramiz?",
+        options: [
+          "map() yordamida",
+          "filter() yordamida",
+          "sort() yordamida",
+          "find() yordamida",
+        ],
+        correctIndex: 0,
+        explanation: "Massiv ma'lumotlari Reactda map() orqali chiqariladi.",
+      },
+      {
+        id: 38,
+        question: "Fetch funksiyasining afzalliklari qanday?",
+        options: [
+          "Brauzerga o'rnatilgan va Promise asosida ishlaydi",
+          "Faqat Reactda ishlaydi",
+          "Internet talab qilmaydi",
+          "Import qilish majburiy",
+        ],
+        correctIndex: 0,
+        explanation: "Fetch yengil, zamonaviy va Promise asosida ishlaydi.",
+      },
+      {
+        id: 39,
+        question: "Fetch funksiyasining kamchiliklari qanday?",
+        options: [
+          "HTTP xatolarini avtomatik throw qilmaydi",
+          "Promise qaytarmaydi",
+          "GET ishlamaydi",
+          "JSON o'qiy olmaydi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Fetch 404 yoki 500 xatolarida avtomatik exception chiqarmaydi.",
+      },
+      {
+        id: 40,
+        question: "REST API nima?",
+        options: [
+          "HTTP orqali resurslar bilan ishlash uslubi",
+          "React Hook",
+          "CSS Framework",
+          "JavaScript kutubxonasi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "REST API HTTP metodlari yordamida resurslar bilan ishlash tamoyilidir.",
+      },
+      {
+        id: 41,
+        question: "HTTP Status Code nima?",
+        options: [
+          "Server javobining holatini bildiruvchi kod",
+          "HTTP metodi",
+          "JSON turi",
+          "CSS xossasi",
+        ],
+        correctIndex: 0,
+        explanation: "Masalan: 200, 201, 404, 500 status kodlari.",
+      },
+      {
+        id: 42,
+        question: "HTTP Methodlar qaysilar?",
+        options: [
+          "GET, POST, PUT, PATCH, DELETE",
+          "SELECT, INSERT",
+          "CREATE, READ",
+          "SEND, RECEIVE",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Asosiy HTTP metodlari GET, POST, PUT, PATCH va DELETE hisoblanadi.",
+      },
+      {
+        id: 43,
+        question: "API bilan ishlashda try...catch nima uchun muhim?",
+        options: [
+          "Xatolarni ushlab dastur to'xtab qolmasligi uchun",
+          "JSON yaratish uchun",
+          "Header qo'shish uchun",
+          "Status kodni o'zgartirish uchun",
+        ],
+        correctIndex: 0,
+        explanation: "try...catch xatolarni boshqarishga yordam beradi.",
+      },
+      {
+        id: 44,
+        question:
+          "Fetch yordamida API bilan ishlashda eng ko'p uchraydigan xatolar qaysilar?",
+        options: [
+          "404, 500, CORS va Network Error",
+          "SyntaxError va TypeScript Error",
+          "CSS Error",
+          "HTML Error",
+        ],
+        correctIndex: 0,
+        explanation:
+          "API bilan ishlashda eng ko'p uchraydigan muammolar 404, 500, CORS va Network Error hisoblanadi.",
       },
     ],
   },
@@ -2605,39 +3023,50 @@ export const topics = [
         ],
         correctIndex: 1,
         explanation:
-          "Axios — so'rovlar yuborish uchun keng qo'llaniladigan mashhur JavaScript kutubxonasidir. U fetchga qaraganda kengroq imkoniyatlarga (interceptorlar, avtomatik JSON konvertatsiya va h.k.) ega.",
+          "Axios — HTTP so'rovlarini yuborish uchun ishlatiladigan mashhur JavaScript kutubxonasi.",
       },
       {
         id: 2,
-        question:
-          "Axios orqali kelgan javob tarkibidan server yuborgan asosiy ma'lumotni qanday o'qiymiz?",
+        question: "Axios qanday o'rnatiladi?",
         options: [
-          "response.json()",
-          "response.data",
-          "response.body",
-          "response.payload",
+          "npm install axios",
+          "npm install react",
+          "npm install fetch",
+          "npm install api",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "Axios serverdan kelgan javobni (JSON) avtomatik o'girib, uni response ob'ektining `.data` xossasiga yuklab beradi.",
+          "Axios `npm install axios` yoki `yarn add axios` buyrug'i orqali o'rnatiladi.",
       },
       {
         id: 3,
-        question: "Axios Interceptors (interceptorlar) nima uchun ishlatiladi?",
+        question: "Axios qanday import qilinadi?",
         options: [
-          "Faqat sahifalarni himoya qilish uchun",
-          "So'rov yuborilishidan oldin yoki javob kelgandan keyin ularni tutib qolib, global ravishda token qo'shish yoki xatolarni log qilish uchun",
-          "Stillarni yangilash uchun",
-          "Ma'lumotlarni o'chirish uchun",
+          "import axios from 'axios'",
+          "import { axios } from 'react'",
+          "require('fetch')",
+          "import api from 'axios/react'",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "Interceptorlar yordamida har bir so'rovga avtomatik ravishda token qo'shib yuborish yoki 401 Unauthorized xatosi kelganda foydalanuvchini logindan chiqarib yuborish kabi ishlarni bitta joyda yozish mumkin.",
+          "Axios odatda `import axios from 'axios'` ko'rinishida import qilinadi.",
       },
       {
         id: 4,
+        question: "Axios frameworkmi yoki kutubxonami?",
+        options: [
+          "Framework",
+          "Kutubxona (Library)",
+          "Ma'lumotlar bazasi",
+          "Runtime",
+        ],
+        correctIndex: 1,
+        explanation: "Axios JavaScript kutubxonasi (Library) hisoblanadi.",
+      },
+      {
+        id: 5,
         question:
-          "Axios da request so'rovini bekor qilish (cancel) uchun nima ishlatiladi?",
+          "Axios da request (so'rov)ni bekor qilish (cancel) uchun nima ishlatiladi?",
         options: [
           "AbortController / AbortSignal",
           "axios.stop()",
@@ -2646,20 +3075,7 @@ export const topics = [
         ],
         correctIndex: 0,
         explanation:
-          "Zamonaviy Axios versiyalarida ham xuddi fetch kabi `AbortController` signali so'rovni bekor qilish uchun ishlatiladi.",
-      },
-      {
-        id: 5,
-        question: "Axios.create() nima vazifani bajaradi?",
-        options: [
-          "Yangi ma'lumot yaratadi",
-          "Boshlang'ich URL va headers sozlamalariga ega bo'lgan global maxsus axios nusxasini (instance) yaratish uchun xizmat qiladi",
-          "So'rovlarni o'chiradi",
-          "Kutubxonani yangilaydi",
-        ],
-        correctIndex: 1,
-        explanation:
-          "`axios.create({ baseURL: 'https://api.site.com' })` yordamida base URL va default headerslarni bir marta yozib, hamma joyda o'sha instance dan foydalanish mumkin.",
+          "Zamonaviy Axios versiyalarida `AbortController` yordamida so'rov bekor qilinadi.",
       },
       {
         id: 6,
@@ -2667,69 +3083,221 @@ export const topics = [
           "Nima uchun Axios oddiy Fetch API dan ustunroq deb hisoblanadi?",
         options: [
           "Chunki u tekin",
-          "Chunki u eski brauzerlarni ham qo'llab-quvvatlaydi, avtomatik ravishda JSON formatiga o'giriydi va interceptorlarni taklif qiladi",
-          "Chunki u faqat Reactda ishlaydi",
-          "Chunki u serverni talab qilmaydi",
+          "Chunki u avtomatik JSON o'giradi, interceptorlar va qulay xatolar boshqaruvini taqdim etadi",
+          "Chunki faqat Reactda ishlaydi",
+          "Chunki internet talab qilmaydi",
         ],
         correctIndex: 1,
         explanation:
-          "Axios fetch ga qaraganda qulayroq xatolar boshqaruvi, avtomatik JSON transformatsiyasi, so'rovlarni oson bekor qilish va interceptorlar kabi boy imkoniyatlar beradi.",
+          "Axios avtomatik JSON parsing, interceptorlar va qulay API bilan Fetchdan farq qiladi.",
       },
       {
         id: 7,
-        question:
-          "Axiosda GET so'rovi yuborish sintaksisi to'g'ri yozilgan qatorni aniqlang.",
+        question: "Axiosda GET so'rovi yuborish sintaksisi qanday yoziladi?",
         options: [
           "axios.get('/api/users')",
-          "axios('/api/users', 'GET')",
           "axios.fetch('/api/users')",
+          "axios('/api/users', 'GET')",
           "axios.getUsers()",
         ],
         correctIndex: 0,
-        explanation:
-          "Axiosda GET so'rovi `.get()` metodi yordamida oddiy va tushunarli yoziladi.",
+        explanation: "GET so'rovi `axios.get(url)` orqali yuboriladi.",
       },
       {
         id: 8,
-        question:
-          "Axios da post so'rovi yuborishda ikkinchi parametr sifatida nima beriladi?",
+        question: "Axiosda qanday HTTP metodlari mavjud?",
         options: [
-          "headers",
-          "Yuboriladigan ma'lumot (payload/body)",
-          "timeout",
-          "Boshlang'ich URL",
+          "GET, POST, PUT, PATCH, DELETE",
+          "READ, WRITE",
+          "IMPORT, EXPORT",
+          "OPEN, CLOSE",
         ],
-        correctIndex: 1,
+        correctIndex: 0,
         explanation:
-          "`axios.post(url, data, config)` tartibida yoziladi, ya'ni ikkinchi parametr serverga yuboriladigan ma'lumotdir.",
+          "Axios barcha asosiy HTTP metodlarini qo'llab-quvvatlaydi.",
       },
       {
         id: 9,
+        question: "Axios yordamida GET so'rovi qanday yuboriladi?",
+        options: [
+          "axios.get('/users')",
+          "axios.post('/users')",
+          "axios.fetch('/users')",
+          "axios('/users', 'POST')",
+        ],
+        correctIndex: 0,
+        explanation: "GET so'rovi `axios.get(url)` yordamida yuboriladi.",
+      },
+      {
+        id: 10,
+        question: "Axios yordamida POST so'rovi qanday yuboriladi?",
+        options: [
+          "axios.post(url, data)",
+          "axios.get(url, data)",
+          "axios.delete(url, data)",
+          "axios.fetch(url)",
+        ],
+        correctIndex: 0,
+        explanation:
+          "POST so'rovi `axios.post(url, data)` ko'rinishida yoziladi.",
+      },
+      {
+        id: 11,
+        question:
+          "Axiosda POST so'rovi yuborishda ikkinchi parametr sifatida nima beriladi?",
+        options: [
+          "Headers",
+          "Yuboriladigan ma'lumot (body/payload)",
+          "Timeout",
+          "Status code",
+        ],
+        correctIndex: 1,
+        explanation:
+          "Ikkinchi parametr serverga yuboriladigan ma'lumot hisoblanadi.",
+      },
+      {
+        id: 12,
+        question: "Axios yordamida PUT so'rovi qanday yuboriladi?",
+        options: [
+          "axios.put(url, data)",
+          "axios.get(url)",
+          "axios.patch(data)",
+          "axios.update(url)",
+        ],
+        correctIndex: 0,
+        explanation: "PUT so'rovi `axios.put(url, data)` orqali yuboriladi.",
+      },
+      {
+        id: 13,
+        question: "Axios yordamida PATCH so'rovi qanday yuboriladi?",
+        options: [
+          "axios.patch(url, data)",
+          "axios.get(url)",
+          "axios.post(url)",
+          "axios.edit(url)",
+        ],
+        correctIndex: 0,
+        explanation:
+          "PATCH so'rovi `axios.patch(url, data)` orqali yuboriladi.",
+      },
+      {
+        id: 14,
+        question: "Axios yordamida DELETE so'rovi qanday yuboriladi?",
+        options: [
+          "axios.delete(url)",
+          "axios.remove(url)",
+          "axios.post(url)",
+          "axios.get(url)",
+        ],
+        correctIndex: 0,
+        explanation: "DELETE so'rovi `axios.delete(url)` yordamida yuboriladi.",
+      },
+      {
+        id: 15,
         question:
           "Axios orqali xatolarni tutish qaysi qatorda to'g'ri ko'rsatilgan?",
         options: [
           "axios.get('/api').catch(error => console.log(error))",
           "axios.get('/api').onError()",
-          "try { axios.get('/api') } catch(e) {}",
-          "if (axios.error) {}",
+          "axios.error()",
+          "if(error){}",
         ],
         correctIndex: 0,
         explanation:
-          "Axios Promise ga asoslanganligi sababli, xatolarni `.catch()` yoki `try-catch` bloklari yordamida oson tutib olish mumkin.",
+          "Axios Promise qaytargani uchun `.catch()` yoki `try...catch` ishlatiladi.",
       },
       {
-        id: 10,
+        id: 16,
+        question: "Axios bilan async/await qanday ishlatiladi?",
+        options: [
+          "const res = await axios.get('/api')",
+          "await axios.fetch('/api')",
+          "axios.await('/api')",
+          "async axios('/api')",
+        ],
+        correctIndex: 0,
+        explanation:
+          "`await axios.get(url)` yordamida Promise natijasi kutiladi.",
+      },
+      {
+        id: 17,
         question:
           "Axios bilan parallel ravishda bir nechta so'rov yuborish uchun qaysi metod ishlatiladi?",
         options: [
-          "axios.all() (yoki Promise.all)",
+          "axios.all() yoki Promise.all()",
           "axios.multiple()",
-          "axios.race()",
-          "axios.together()",
+          "axios.group()",
+          "axios.parallel()",
         ],
         correctIndex: 0,
         explanation:
-          "`axios.all([request1, request2])` yordamida bir nechta so'rovlarni parallel yuborib, hammasi tugagach natijalarni olish mumkin.",
+          "Bir nechta so'rovlarni parallel yuborish uchun `Promise.all()` yoki `axios.all()` ishlatiladi.",
+      },
+      {
+        id: 18,
+        question:
+          "Axios avtomatik ravishda JSON ma'lumotlarini JavaScript obyektiga aylantiradimi?",
+        options: ["Ha", "Yo'q", "Faqat Reactda", "Faqat Node.js da"],
+        correctIndex: 0,
+        explanation:
+          "Axios JSON javobni avtomatik ravishda JavaScript obyektiga aylantiradi.",
+      },
+      {
+        id: 19,
+        question: "Axios va Fetch o'rtasidagi asosiy farqlar qanday?",
+        options: [
+          "Axios avtomatik JSON parsing va interceptorlarni qo'llab-quvvatlaydi",
+          "Hech qanday farqi yo'q",
+          "Fetch faqat Reactda ishlaydi",
+          "Axios faqat Node.js da ishlaydi",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Axios qo'shimcha qulayliklar (JSON parsing, interceptor, timeout va boshqalar) bilan Fetchdan farq qiladi.",
+      },
+      {
+        id: 20,
+        question:
+          "Reactda Axios bilan API chaqiruvi qaysi Hook ichida yoziladi?",
+        options: ["useEffect", "useMemo", "useRef", "useId"],
+        correctIndex: 0,
+        explanation:
+          "API chaqiruvlari odatda `useEffect` Hook ichida yoziladi.",
+      },
+      {
+        id: 21,
+        question:
+          "API dan olingan ma'lumotlar Reactda qaysi Hook yordamida saqlanadi?",
+        options: ["useState", "useEffect", "useMemo", "useRef"],
+        correctIndex: 0,
+        explanation:
+          "API dan kelgan ma'lumotlar odatda `useState` yordamida saqlanadi.",
+      },
+      {
+        id: 22,
+        question: "Axios bilan token (Authorization) qanday yuboriladi?",
+        options: [
+          "headers ichida Authorization orqali",
+          "body ichida",
+          "params ichida",
+          "response ichida",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Token odatda `headers: { Authorization: 'Bearer token' }` ko'rinishida yuboriladi.",
+      },
+      {
+        id: 23,
+        question: "Axiosda try...catch nima uchun muhim?",
+        options: [
+          "Xatolarni ushlash uchun",
+          "Komponent yaratish uchun",
+          "CSS yozish uchun",
+          "JSON yaratish uchun",
+        ],
+        correctIndex: 0,
+        explanation:
+          "try...catch API so'rovlarida yuz beradigan xatolarni boshqarish uchun ishlatiladi.",
       },
     ],
   },
